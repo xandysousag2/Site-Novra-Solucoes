@@ -1,15 +1,17 @@
-
 /* =========================================
    VARIÁVEIS GLOBAIS
 ========================================= */
 :root {
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Roboto", sans-serif;
-  --primary: #0A2540;       
-  --primary-light: #1565C0; 
-  --accent: #FF6D00;        
+
+  --primary: #0A2540;
+  --primary-light: #1565C0;
+  --accent: #FF6D00;
+
   --bg: #ffffff;
   --bg-light: #f8f9fa;
+
   --text: #333333;
   --muted: #666666;
 }
@@ -17,164 +19,410 @@
 /* =========================================
    RESET E BASE
 ========================================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-body); color: var(--text); background-color: var(--bg); line-height: 1.6; overflow-x: hidden; }
-img { max-width: 100%; height: auto; display: block; }
-a { text-decoration: none; color: inherit; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* =========================================
    TIPOGRAFIA
 ========================================= */
-h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--primary); line-height: 1.2; }
-h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
-h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; letter-spacing: -0.5px; }
-h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
-.lead { font-size: 1.2rem; color: var(--muted); margin-bottom: 30px; }
-.text-center { text-align: center; }
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
 
 /* =========================================
    LAYOUT E CORES DE FUNDO
 ========================================= */
-.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.section { padding: 100px 0; }
-.bg-light { background-color: var(--bg-light); }
-.bg-dark { background-color: #0A1526; color: white; } /* Fundo escuro do passo a passo */
-.bg-dark h2, .bg-dark h3, .bg-dark h4 { color: white; }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-dark {
+  background-color: #0A1526;
+  color: white;
+}
+
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4 {
+  color: white;
+}
 
 /* =========================================
    HEADER
 ========================================= */
-.site-header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-.header-inner { display: flex; justify-content: space-between; align-items: center; }
-.brand { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-.main-nav { display: flex; gap: 30px; align-items: center; }
-.main-nav a { font-weight: 600; color: var(--primary); transition: color 0.3s ease; }
-.main-nav a:hover { color: var(--accent); }
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.main-nav a {
+  font-weight: 600;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Botões dentro do header */
+.site-header .main-nav a.btn {
+  color: white;
+}
+
+.site-header .main-nav a.btn:hover {
+  color: white;
+}
 
 /* =========================================
    HERO SECTION (Topo)
 ========================================= */
-.hero-section { padding: 160px 0 80px; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); }
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.badge-orange { display: inline-block; padding: 8px 16px; background: #FFF0E6; color: var(--accent); border-radius: 50px; font-weight: 700; font-size: 0.85rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-.hero-ctas { display: flex; gap: 15px; margin-top: 30px; margin-bottom: 15px; }
+.hero-section {
+  padding: 160px 0 80px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
 
-.hero-visual { position: relative; display: block; width: 100%; }
-.rounded-img { border-radius: 20px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
-/* Card Flutuante 20% */
+.badge-orange {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #FFF0E6;
+  color: var(--accent);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.hero-visual {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.rounded-img {
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Limita altura da imagem no hero em todas as páginas */
+.hero-visual .rounded-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Ajuste específico para o hero de Soluções Industriais */
+.hero-industriais {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* Card Flutuante (20%, 100%, etc.) */
 .floating-card {
   position: absolute;
   background: #FAFAFA;
   padding: 30px 40px;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   z-index: 10;
   bottom: -30px;
   left: -40px;
   text-align: center;
 }
-.kpi-number { font-size: 5rem; font-weight: 900; color: var(--accent); line-height: 1; font-family: var(--font-heading); letter-spacing: -2px; margin-bottom: 5px; }
+
+.kpi-number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  font-family: var(--font-heading);
+  letter-spacing: -2px;
+  margin-bottom: 5px;
+}
 
 /* =========================================
    BOTÕES
 ========================================= */
-.btn { display: inline-block; padding: 14px 30px; border-radius: 8px; font-weight: 700; text-align: center; transition: all 0.3s ease; cursor: pointer; border: none; }
-.btn-primary { background-color: var(--primary); color: white; }
-.btn-primary:hover { background-color: var(--primary-light); transform: translateY(-2px); }
-.btn-accent { background-color: var(--accent); color: white; }
-.btn-accent:hover { background-color: #E65100; transform: translateY(-2px); }
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #E65100;
+  transform: translateY(-2px);
+}
+
+/* Botão fantasma (ghost) */
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-ghost:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
 
 /* =========================================
    GRIDS E CARDS
 ========================================= */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
 
-/* Cards Quadrados (Vantagens) */
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Cards quadrados (vantagens) */
 .cards-3 .card {
   background: white;
   border-radius: 16px;
   padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease;
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
-.cards-3 .card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
 
-/* =========================================
-   LISTA DE BOLETOS (Transparência)
-========================================= */
-.boleto-list { margin-top: 40px; }
-.boleto-item { border-left: 4px solid var(--accent); padding-left: 20px; margin-bottom: 30px; }
-.boleto-item h4 { font-size: 1.3rem; margin-bottom: 10px; }
-.boleto-item p { color: var(--muted); }
-
-/* =========================================
-   PASSO A PASSO (Processo Transparente)
-========================================= */
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; }
-.process-step { border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px; }
-.process-step:first-child { border-left: none; padding-left: 0; }
-.step-num { font-size: 4rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 20px; font-family: var(--font-heading); }
-.process-step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
-
-/* =========================================
-   RESPONSIVO (CELULAR)
-========================================= */
-@media (max-width: 992px) {
-  .hero-grid, .two-col, .process-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-  .hero-text h1 { font-size: 2.5rem; }
-  .hero-ctas { justify-content: center; }
-  .floating-card { position: relative; bottom: 0; left: 0; margin: -40px auto 0; width: 80%; }
-  .cards-3 { grid-template-columns: 1fr; }
-  .cards-3 .card { aspect-ratio: auto; min-height: 250px; }
-  .boleto-item { text-align: left; }
-  .process-step { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 30px; }
-  .process-step:first-child { border-top: none; padding-top: 0; }
+.cards-3 .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* --- CORREÇÃO: BOTÃO DO HEADER --- */
-.site-header .main-nav a.btn {
-  color: white;
-}
-.site-header .main-nav a.btn:hover {
-  color: white;
-}
-/* --- CARDS COM IMAGEM NO TOPO (Engenharia) --- */
+/* Cards com imagem no topo (Eficiência / Nossas soluções) */
 .card-image-top {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  overflow: hidden; /* Faz a imagem respeitar a borda arredondada do card */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .card-image-top:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
+
 .card-image-top img {
   width: 100%;
   height: 220px;
-  object-fit: cover; /* Garante que a foto não fique esticada */
+  object-fit: cover;
 }
+
 .card-content {
   padding: 30px;
   flex-grow: 1;
 }
 
 /* =========================================
+   LISTA DE BOLETOS (Transparência)
+========================================= */
+.boleto-list {
+  margin-top: 40px;
+}
+
+.boleto-item {
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.boleto-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.boleto-item p {
+  color: var(--muted);
+}
+
+/* =========================================
+   PASSO A PASSO (Processo Transparente)
+========================================= */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.process-step {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 30px;
+}
+
+.process-step:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.step-num {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+}
+
+.process-step p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+/* =========================================
    SEÇÃO: SOLUÇÕES INDUSTRIAIS
-   Grade 4 colunas no desktop
-   2 colunas no tablet, 1 no celular
 ========================================= */
 
 /* Grade principal */
@@ -221,7 +469,7 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   transform: scale(1.05);
 }
 
-/* Corpo do card */
+/* Corpo do card industrial */
 .ind-card-body {
   padding: 24px;
   display: flex;
@@ -245,7 +493,7 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   flex-grow: 1;
 }
 
-/* Botão "Ver aplicações típicas" */
+/* Botão "Ver aplicações típicas" (accordion) */
 .accordion-toggle {
   background: none;
   border: none;
@@ -267,7 +515,7 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   color: #E65100;
 }
 
-/* Seta que rotaciona quando abre */
+/* Seta */
 .accordion-toggle::after {
   content: "↓";
   display: inline-block;
@@ -279,7 +527,7 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   transform: rotate(180deg);
 }
 
-/* Lista de aplicações (oculta por padrão via atributo hidden no HTML) */
+/* Conteúdo do accordion */
 .accordion-content {
   margin-bottom: 16px;
 }
@@ -308,7 +556,7 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   top: 6px;
 }
 
-/* Botão WhatsApp do card */
+/* Botão WhatsApp do card industrial */
 .ind-btn {
   margin-top: auto;
   width: 100%;
@@ -318,18 +566,68 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
 }
 
 /* =========================================
-   RESPONSIVO: Soluções Industriais
+   RESPONSIVO
 ========================================= */
-
-/* Tablet: 2 colunas */
 @media (max-width: 1100px) {
+  .hero-grid,
+  .two-col,
+  .process-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .floating-card {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: -40px auto 0;
+    width: 80%;
+  }
+
+  .cards-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-3 .card {
+    aspect-ratio: auto;
+    min-height: 250px;
+  }
+
+  .boleto-item {
+    text-align: left;
+  }
+
+  .process-grid {
+    margin-top: 40px;
+  }
+
+  .process-step {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
+  .process-step:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
   .industrial-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
-/* Celular: 1 coluna */
 @media (max-width: 600px) {
   .industrial-grid {
     grid-template-columns: 1fr;
@@ -343,27 +641,4 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   .ind-card-body {
     padding: 20px;
   }
-}
-
-/* =========================================
-   CORREÇÃO: btn-ghost (botão hero Home)
-   Estava referenciado no HTML mas sem estilo
-========================================= */
-.btn-ghost {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.btn-ghost:hover {
-  background: var(--primary);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Limita altura da imagem no hero em todas as páginas */
-.hero-visual .rounded-img {
-  max-height: 420px;
-  width: 100%;
-  object-fit: cover;
 }
