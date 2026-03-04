@@ -360,3 +360,10 @@ h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
   color: white;
   transform: translateY(-2px);
 }
+
+/* Limita altura da imagem no hero em todas as páginas */
+.hero-visual .rounded-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
