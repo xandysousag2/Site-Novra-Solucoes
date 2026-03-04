@@ -3,95 +3,308 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Novra Soluções | Inteligência em Energia</title>
+  <title>Soluções Industriais | Novra Soluções</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- IMPORTANTE: sem barra inicial -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Atenção: "../" sobe um nível para encontrar a pasta assets -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 
 <body>
+
+  <!-- ========== CABEÇALHO ========== -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- IMPORTANTE: "./" funciona na raiz do repo -->
-      <a class="brand" href="./">
-        <img src="assets/img/logo_topo.png" alt="Novra Soluções" style="max-height: 50px;">
+      <a class="brand" href="../">
+        <img src="../assets/img/logo_topo.png" alt="Novra Soluções" style="max-height: 80px;">
       </a>
-
       <nav class="main-nav">
-        <a href="#solucoes">Soluções</a>
+        <a href="../#solucoes">Soluções</a>
         <a href="https://wa.me/5541987377444" target="_blank" rel="noopener">Contato</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <!-- ========== HERO DA PÁGINA ========== -->
     <section class="hero-section">
       <div class="container hero-grid">
         <div class="hero-text">
-          <!-- troquei "badge" por "badge-orange" porque é a classe que existe no seu CSS -->
-          <div class="badge-orange">Especialistas em Energia</div>
-
-          <h1>Inteligência e economia para o seu negócio.</h1>
+          <div class="badge-orange">Portfólio Industrial</div>
+          <h1>Soluções industriais sob medida para a sua operação.</h1>
           <p class="lead">
-            Transformamos a maneira como sua empresa consome energia. Reduza custos, elimine desperdícios e tenha total controle sem precisar de grandes investimentos.
+            A Novra atua como integradora técnica, conectando sua empresa às melhores
+            tecnologias em infraestrutura, medição, eficiência e segurança industrial.
+            Cada projeto é analisado de forma personalizada, com foco em resultado real.
           </p>
-
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#solucoes">Conhecer Soluções</a>
-            <a class="btn btn-ghost" href="https://wa.me/5541987377444" target="_blank" rel="noopener">Falar com especialista</a>
+            <a class="btn btn-primary" href="#solucoes-grid">Ver soluções</a>
+            <a class="btn btn-ghost"
+               href="https://wa.me/5541987377444?text=Quero%20conhecer%20as%20solu%C3%A7%C3%B5es%20industriais%20da%20Novra"
+               target="_blank" rel="noopener">Falar com especialista</a>
           </div>
         </div>
 
         <div class="hero-visual">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Gestão de Energia"
+            src="../assets/img/solucoes-engenharia-inspecao.jpg"
+            alt="Engenheiro realizando inspeção industrial"
             class="rounded-img"
           >
         </div>
       </div>
     </section>
 
-    <section id="solucoes" class="section bg-light">
+    <!-- ========== GRADE COMPLETA DOS 8 CARDS ========== -->
+    <section class="section bg-light" id="solucoes-grid">
       <div class="container">
+
         <div class="section-header text-center">
-          <h2>Nossas Soluções</h2>
-          <p class="lead">Escolha o melhor caminho para otimizar sua energia.</p>
+          <h2>Nossas Linhas de Solução</h2>
+          <p class="lead" style="max-width: 720px; margin-left: auto; margin-right: auto;">
+            Do diagnóstico à entrega, oferecemos soluções completas nas principais
+            frentes da indústria moderna. Clique em "Ver aplicações típicas" para
+            entender onde cada solução se encaixa.
+          </p>
         </div>
 
-        <div class="cards-3">
-          <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3>Energia por Assinatura</h3>
-            <p style="color: var(--muted); margin: 15px 0;">
-              Reduza o custo da sua conta de luz em até 20% sem precisar instalar painéis solares ou fazer obras.
-            </p>
-            <!-- IMPORTANTE: sem barra inicial -->
-            <a href="energia-por-assinatura/" class="btn btn-accent" style="width: 100%;">Ver detalhes</a>
-          </div>
+        <div class="industrial-grid" id="solucoes-industriais">
 
-          <div class="card" style="border-top: 4px solid #2E7D32;">
-            <h3>Eficiência Energética</h3>
-            <p style="color: var(--muted); margin: 15px 0;">
-              Projetos financiados pelas concessionárias (PEE) para modernizar sua infraestrutura a custo zero.
-            </p>
-            <!-- IMPORTANTE: sem barra inicial -->
-            <a href="eficiencia-energetica/" class="btn btn-accent" style="width: 100%;">Ver detalhes</a>
-          </div>
+          <!-- CARD 1: Eletromecânicos -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-eletromecanicos.jpg"
+                   alt="Estruturas eletromecânicas e leitos de cabos industriais">
+            </div>
+            <div class="ind-card-body">
+              <h3>Eletromecânicos e Estruturas para Cabos</h3>
+              <p>Estruturas eletromecânicas para suporte e organização de cabos e
+                 equipamentos em ambientes industriais, com leitos, eletrocalhas,
+                 perfis estruturais e acabamentos de alta resistência à corrosão.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Galpões industriais e centros logísticos</li>
+                  <li>Parques de geração e distribuição de energia</li>
+                  <li>Instalações fotovoltaicas e abrigos para inversores</li>
+                  <li>Projetos especiais com estruturas sob medida</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Eletromec%C3%A2nicos%20e%20Estruturas%20para%20Cabos"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
 
-          <div class="card" style="border-top: 4px solid #1565C0;">
-            <h3>Medição Inteligente</h3>
-            <p style="color: var(--muted); margin: 15px 0;">
-              Sistemas de telemetria para monitoramento do consumo em tempo real. Tenha dados precisos na palma da mão.
-            </p>
-            <a href="https://wa.me/5541987377444" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">Falar com consultor</a>
-          </div>
-        </div>
+          <!-- CARD 2: PRFV -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-prfv.jpg"
+                   alt="Estruturas industriais em PRFV fibra de vidro">
+            </div>
+            <div class="ind-card-body">
+              <h3>Estruturas em PRFV (Fibra de Vidro)</h3>
+              <p>Perfis, grades, escadas, guarda-corpos e leitos estruturais em
+                 fibra de vidro para ambientes com altos índices de corrosão,
+                 riscos elétricos ou restrições ao uso de metais convencionais.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Estações de tratamento de água e efluentes</li>
+                  <li>Indústria química e petroquímica</li>
+                  <li>Plataformas e ambientes costeiros ou offshore</li>
+                  <li>Áreas com risco elétrico ou atmosferas corrosivas</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Estruturas%20em%20PRFV"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 3: Engenharia e Inspeção -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-engenharia-inspecao.jpg"
+                   alt="Engenheiro realizando inspeção industrial">
+            </div>
+            <div class="ind-card-body">
+              <h3>Engenharia e Inspeção Industrial</h3>
+              <p>Serviços de inspeção técnica e projetos de adequação voltados à
+                 integridade de equipamentos e estruturas, com foco em segurança
+                 operacional e conformidade com as normas regulamentadoras vigentes.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Adequação de plantas industriais às NRs</li>
+                  <li>Inspeção de pontes rolantes, pórticos e guindastes</li>
+                  <li>Laudos e inventários para auditorias e seguros</li>
+                  <li>Redução de riscos e paradas não programadas</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Engenharia%20e%20Inspe%C3%A7%C3%A3o%20Industrial"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 4: Iluminação e Ventilação Natural -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-iluminacao-natural.jpg"
+                   alt="Galpão com iluminação e ventilação natural">
+            </div>
+            <div class="ind-card-body">
+              <h3>Iluminação e Ventilação Natural</h3>
+              <p>Lanternins, domos, claraboias e exaustores que aproveitam luz e
+                 ventilação naturais em grandes áreas cobertas, reduzindo o consumo
+                 elétrico e melhorando o conforto térmico do ambiente.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Galpões logísticos e centros de distribuição</li>
+                  <li>Plantas industriais com grande área coberta</li>
+                  <li>Supermercados e ambientes de varejo</li>
+                  <li>Projetos de eficiência energética e conforto térmico</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Ilumina%C3%A7%C3%A3o%20e%20Ventila%C3%A7%C3%A3o%20Natural"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 5: Medição de Água e Gás -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-medicao-telemetria.jpg"
+                   alt="Medição de água e gás com telemetria">
+            </div>
+            <div class="ind-card-body">
+              <h3>Medição de Água e Gás com Telemetria</h3>
+              <p>Medidores precisos, preparados para integração com sistemas de
+                 telemedição e leitura remota. Permitem acompanhamento em tempo real
+                 e identificação rápida de consumos anormais ou vazamentos.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Condomínios com medição individualizada</li>
+                  <li>Indústrias e comércios com alto consumo hídrico ou de gás</li>
+                  <li>Concessionárias e projetos de gestão pública</li>
+                  <li>Projetos de Smart Building e IoT industrial</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Medi%C3%A7%C3%A3o%20de%20%C3%81gua%20e%20G%C3%A1s%20com%20Telemetria"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 6: Soluções Elétricas -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-eletricas-medicao.jpg"
+                   alt="Painel elétrico industrial organizado">
+            </div>
+            <div class="ind-card-body">
+              <h3>Soluções Elétricas e de Medição</h3>
+              <p>Caixas, quadros e acessórios para instalações elétricas e sistemas
+                 de medição, incluindo caixas de policarbonato, quadros de distribuição
+                 e string boxes para fotovoltaico, com opção para telemetria.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Infraestrutura elétrica predial e industrial</li>
+                  <li>Sistemas fotovoltaicos conectados à rede</li>
+                  <li>Projetos com medição setorizada e telemetria</li>
+                  <li>Obras que exigem organização e segurança elétrica</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%20e%20de%20Medi%C3%A7%C3%A3o"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 7: Tubos e Conexões (Vetro) -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-vetro-tubos.jpg"
+                   alt="Tubos e conexões para irrigação e saneamento">
+            </div>
+            <div class="ind-card-body">
+              <h3>Tubos e Conexões para Irrigação e Saneamento</h3>
+              <p>Linha completa de tubos em PVC, PRFV e fibra de vidro para projetos
+                 de irrigação, saneamento e perfuração de poços artesianos, com
+                 alta durabilidade em campo.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Sistemas de irrigação agrícola e pivô central</li>
+                  <li>Redes de saneamento e adução de água</li>
+                  <li>Perfuração e revestimento de poços artesianos</li>
+                  <li>Obras de infraestrutura hídrica urbana e rural</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Tubos%20e%20Conex%C3%B5es%20para%20Irriga%C3%A7%C3%A3o%20e%20Saneamento"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+          <!-- CARD 8: Aspiração Central -->
+          <article class="ind-card">
+            <div class="ind-card-img">
+              <img src="../assets/img/solucoes-aspiracao-central.jpg"
+                   alt="Ambiente corporativo com aspiração central">
+            </div>
+            <div class="ind-card-body">
+              <h3>Sistemas de Aspiração Central</h3>
+              <p>Sistemas de alta performance com a unidade de sucção instalada fora
+                 do ambiente de uso. Combinam potência, baixo ruído e remoção eficiente
+                 de poeira fina para locais com alto padrão de higiene.</p>
+              <button class="accordion-toggle" aria-expanded="false">
+                Ver aplicações típicas
+              </button>
+              <div class="accordion-content" hidden>
+                <ul>
+                  <li>Escritórios, clínicas e ambientes corporativos</li>
+                  <li>Condomínios de médio e alto padrão</li>
+                  <li>Áreas comerciais com limpeza frequente</li>
+                  <li>Ambientes com exigência de baixa poeira em suspensão</li>
+                </ul>
+              </div>
+              <a class="btn btn-primary ind-btn"
+                 href="https://wa.me/5541987377444?text=Tenho%20interesse%20em%20Sistemas%20de%20Aspira%C3%A7%C3%A3o%20Central"
+                 target="_blank" rel="noopener">Falar sobre esta solução</a>
+            </div>
+          </article>
+
+        </div><!-- .industrial-grid -->
       </div>
     </section>
+
   </main>
+
+  <!-- O mesmo accordion.js funciona aqui também -->
+  <script src="../assets/js/accordion.js"></script>
 </body>
 </html>
