@@ -81,7 +81,7 @@ h3 {
 }
 
 /* =========================================
-   LAYOUT E CORES DE FUNDO
+   LAYOUT
 ========================================= */
 .container {
   width: 100%;
@@ -164,7 +164,75 @@ h3 {
 }
 
 /* =========================================
-   HERO SECTION
+   BOTÕES
+========================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #E65100;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 109, 0, 0.3);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #E65100;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.card-solution-featured .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.card-solution-featured .btn-outline:hover {
+  background: white;
+  color: var(--primary);
+}
+
+/* =========================================
+   HERO
 ========================================= */
 .hero-section {
   padding: 160px 0 80px;
@@ -195,344 +263,132 @@ h3 {
   display: flex;
   gap: 15px;
   margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-.hero-visual {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.rounded-img {
-  border-radius: 20px;
-  width: 100%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.hero-visual .rounded-img {
-  max-height: 420px;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Hero específico Soluções Industriais */
-.hero-industriais {
-  padding-top: 120px;
-  padding-bottom: 60px;
-}
-
-/* Card Flutuante */
-.floating-card {
-  position: absolute;
-  background: #FAFAFA;
-  padding: 30px 40px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  bottom: -30px;
-  left: -40px;
-  text-align: center;
-}
-
-.kpi-number {
-  font-size: 5rem;
-  font-weight: 900;
-  color: var(--accent);
-  line-height: 1;
-  font-family: var(--font-heading);
-  letter-spacing: -2px;
-  margin-bottom: 5px;
 }
 
 /* =========================================
-   BOTÕES
+   GRIDS
 ========================================= */
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 8px;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-light);
-  transform: translateY(-2px);
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  color: white;
-}
-
-.btn-accent:hover {
-  background-color: #E65100;
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
-
-.btn-ghost:hover {
-  background: var(--primary);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* =========================================
-   GRIDS E CARDS
-========================================= */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.cards-3 {
+.three-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 50px;
 }
 
-/* Cards de vantagens (sem emojis) */
-.cards-3 .card {
-  background: white;
-  border-radius: 16px;
-  padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 220px;
-}
-
-.cards-3 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* Linha laranja decorativa nos cards de vantagens */
-.card-accent-line {
-  width: 40px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
-  margin-bottom: 20px;
-}
-
-/* Cards com imagem no topo */
-.card-image-top {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.card-image-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.card-image-top img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 30px;
-  flex-grow: 1;
-}
-
-/* =========================================
-   BULLETS VISUAIS (Como chega a energia)
-========================================= */
-.energy-steps {
-  list-style: none;
-  padding: 0;
-  margin: 30px 0;
-}
-
-.energy-steps li {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.energy-steps li .step-dot {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  background: var(--accent);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  margin-top: 2px;
-}
-
-/* =========================================
-   BOLETOS
-========================================= */
-.boleto-list {
-  margin-top: 40px;
-}
-
-.boleto-item {
-  border-left: 4px solid var(--accent);
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
-
-.boleto-item h4 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.boleto-item p {
-  color: var(--muted);
-}
-
-/* =========================================
-   PROCESSO / PASSO A PASSO
-========================================= */
-.process-grid {
+.four-col {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin-top: 60px;
 }
 
-.process-step {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  padding-left: 30px;
+/* =========================================
+   CARDS DE SOLUÇÃO
+========================================= */
+.card-solution {
+  background: white;
+  border-radius: 16px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border-top: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.process-step:first-child {
-  border-left: none;
-  padding-left: 0;
+.card-solution:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-.step-num {
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 20px;
+.card-solution-featured {
+  background: var(--primary);
+  border-top: 4px solid var(--accent);
+  color: white;
+}
+
+.card-solution-featured h3,
+.card-solution-featured p,
+.card-solution-featured li {
+  color: white;
+}
+
+.card-solution-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
   font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.process-step p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+.card-solution-icon {
+  font-size: 2.2rem;
+  line-height: 1;
 }
 
-/* =========================================
-   SELO REGULATÓRIO
-========================================= */
-.legal-seal {
-  margin-top: 30px;
-  padding: 14px 20px;
-  background: #f0f4ff;
-  border-left: 4px solid var(--primary-light);
-  border-radius: 6px;
-  font-size: 0.85rem;
+.card-solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.card-solution-list li {
+  font-size: 0.88rem;
+  padding-left: 20px;
+  position: relative;
   color: var(--muted);
-  line-height: 1.5;
 }
 
-.legal-seal strong {
-  color: var(--primary);
+.card-solution-featured .card-solution-list li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card-solution-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.card-solution .btn {
+  margin-top: auto;
+  text-align: center;
 }
 
 /* =========================================
-   FAQ
+   SECTION HEADER
 ========================================= */
-.faq-list {
-  margin-top: 50px;
-  max-width: 860px;
+.section-header {
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 
-.faq-item {
-  border-bottom: 1px solid #e5e7eb;
-  padding: 24px 0;
+.section-header h2 {
+  margin-bottom: 16px;
 }
 
-.faq-item:first-child {
-  border-top: 1px solid #e5e7eb;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding: 0;
-  line-height: 1.4;
-}
-
-.faq-question::after {
-  content: "+";
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--accent);
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.faq-question[aria-expanded="true"]::after {
-  transform: rotate(45deg);
-}
-
-.faq-answer {
-  margin-top: 14px;
-  font-size: 0.98rem;
+.section-header .lead {
   color: var(--muted);
-  line-height: 1.7;
 }
 
 /* =========================================
-   BLOCO SOBRE A NOVRA (Home)
+   SOBRE A NOVRA
 ========================================= */
 .about-novra {
   display: grid;
@@ -541,33 +397,22 @@ h3 {
   align-items: center;
 }
 
-.about-novra-text h2 {
-  margin-bottom: 20px;
-}
-
-.about-novra-text p {
-  color: var(--muted);
-  margin-bottom: 20px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
 .about-highlights {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 40px;
 }
 
 .about-highlight-item {
-  border-left: 3px solid var(--accent);
-  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .about-highlight-item strong {
-  display: block;
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary);
   line-height: 1;
@@ -581,7 +426,7 @@ h3 {
 }
 
 /* =========================================
-   SEÇÃO SOLUÇÕES INDUSTRIAIS
+   SOLUÇÕES INDUSTRIAIS
 ========================================= */
 .industrial-grid {
   display: grid;
@@ -591,7 +436,7 @@ h3 {
 }
 
 .ind-card {
-  background: #ffffff;
+  background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   overflow: hidden;
@@ -616,7 +461,6 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   transition: transform 0.4s ease;
 }
 
@@ -647,65 +491,6 @@ h3 {
   flex-grow: 1;
 }
 
-.accordion-toggle {
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 0;
-  text-align: left;
-  margin-bottom: 12px;
-  font-family: var(--font-body);
-  transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.accordion-toggle:hover {
-  color: #E65100;
-}
-
-.accordion-toggle::after {
-  content: "↓";
-  display: inline-block;
-  font-size: 0.8rem;
-  transition: transform 0.25s ease;
-}
-
-.accordion-toggle[aria-expanded="true"]::after {
-  transform: rotate(180deg);
-}
-
-.accordion-content {
-  margin-bottom: 16px;
-}
-
-.accordion-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.accordion-content ul li {
-  font-size: 0.875rem;
-  color: var(--muted);
-  padding: 5px 0 5px 16px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.accordion-content ul li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.75rem;
-  top: 6px;
-}
-
 .ind-btn {
   margin-top: auto;
   width: 100%;
@@ -715,110 +500,43 @@ h3 {
 }
 
 /* =========================================
-   RESPONSIVO
+   FEATURE CARDS (Por que a Novra)
 ========================================= */
-@media (max-width: 1100px) {
-  .hero-grid,
-  .two-col,
-  .process-grid,
-  .about-novra {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-ctas {
-    justify-content: center;
-  }
-
-  .floating-card {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin: -40px auto 0;
-    width: 80%;
-  }
-
-  .cards-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .cards-3 .card {
-    min-height: 180px;
-  }
-
-  .boleto-item {
-    text-align: left;
-  }
-
-  .process-step {
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-left: 0;
-    padding-top: 30px;
-  }
-
-  .process-step:first-child {
-    border-top: none;
-    padding-top: 0;
-  }
-
-  .industrial-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-  }
-
-  .energy-steps li {
-    text-align: left;
-  }
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .industrial-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .ind-card-img {
-    height: 200px;
-  }
-
-  .ind-card-body {
-    padding: 20px;
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-ctas {
-    flex-direction: column;
-  }
+.feature-card:hover {
+  transform: translateY(-3px);
 }
 
-/* ==========================================
-   WIDGET NOVA — Assistente Virtual Novra
-   Adicionar ao final do styles.css
-========================================== */
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
 
-/* Bolha flutuante */
+.feature-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   WIDGET NOVA — Assistente Virtual
+========================================= */
 .novra-chat-toggle {
   position: fixed;
   bottom: 28px;
@@ -842,7 +560,6 @@ h3 {
   box-shadow: 0 10px 32px rgba(255, 109, 0, 0.5);
 }
 
-/* Balão de boas-vindas */
 .novra-chat-balloon {
   position: fixed;
   bottom: 100px;
@@ -872,7 +589,6 @@ h3 {
   line-height: 1;
 }
 
-/* Janela de chat */
 .novra-chat-window {
   position: fixed;
   bottom: 100px;
@@ -889,7 +605,6 @@ h3 {
   animation: novraSlideUp 0.35s ease;
 }
 
-/* Estado fechado */
 .novra-chat-closed .novra-chat-window {
   display: none;
 }
@@ -898,7 +613,6 @@ h3 {
   display: none;
 }
 
-/* Cabeçalho */
 .novra-chat-header {
   background: var(--primary);
   color: white;
@@ -952,7 +666,6 @@ h3 {
   color: white;
 }
 
-/* Área de mensagens */
 .novra-chat-messages {
   flex: 1;
   overflow-y: auto;
@@ -963,68 +676,50 @@ h3 {
   scroll-behavior: smooth;
 }
 
-/* Mensagens */
 .novra-msg {
   display: flex;
   flex-direction: column;
-  max-width: 85%;
-}
-
-.novra-msg-bot {
-  align-self: flex-start;
 }
 
 .novra-msg-user {
-  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.novra-msg-bot {
+  align-items: flex-start;
 }
 
 .novra-bubble {
+  max-width: 85%;
   padding: 12px 16px;
   border-radius: 16px;
   font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-.novra-msg-bot .novra-bubble {
-  background: #f0f2f5;
-  color: var(--text);
-  border-bottom-left-radius: 4px;
-}
-
-.novra-msg-user .novra-bubble {
-  background: var(--primary);
-  color: white;
-  border-bottom-right-radius: 4px;
+  line-height: 1.6;
 }
 
 .novra-bubble ul {
-  margin: 8px 0 0 16px;
-  padding: 0;
+  padding-left: 18px;
+  margin-top: 8px;
 }
 
 .novra-bubble ul li {
   margin-bottom: 4px;
 }
 
-.novra-bubble strong {
-  color: var(--accent);
+.novra-msg-user .novra-bubble {
+  background: var(--accent);
+  color: white;
+  border-bottom-right-radius: 4px;
 }
 
-.novra-msg-bot .novra-bubble strong {
-  color: var(--primary);
+.novra-msg-bot .novra-bubble {
+  background: #f4f4f4;
+  color: var(--text);
+  border-bottom-left-radius: 4px;
 }
 
-/* Indicador de digitando */
-.novra-typing .novra-bubble {
-  background: #f0f2f5;
-  color: var(--muted);
-  font-style: italic;
-  font-size: 0.82rem;
-}
-
-/* Perguntas rápidas */
 .novra-quick-questions {
-  padding: 8px 12px 10px;
+  padding: 10px 14px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1032,12 +727,12 @@ h3 {
 }
 
 .novra-quick-questions button {
-  background: #FFF0E6;
-  color: var(--accent);
-  border: 1px solid #FFD5B0;
+  background: white;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
   border-radius: 20px;
   padding: 6px 14px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1050,7 +745,6 @@ h3 {
   border-color: var(--accent);
 }
 
-/* Campo de input */
 .novra-chat-input-area {
   display: flex;
   align-items: center;
@@ -1094,7 +788,6 @@ h3 {
   transform: scale(1.05);
 }
 
-/* Rodapé */
 .novra-chat-footer {
   text-align: center;
   font-size: 0.75rem;
@@ -1114,7 +807,6 @@ h3 {
   text-decoration: underline;
 }
 
-/* Animações */
 @keyframes novraFadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1125,8 +817,65 @@ h3 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 1100px) {
+  .hero-grid,
+  .about-novra {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .four-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industrial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+
+  .four-col {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
   .novra-chat-window {
     right: 0;
     bottom: 0;
@@ -1144,215 +893,4 @@ h3 {
     right: 16px;
     bottom: 90px;
   }
-}
-
-/* ==========================================
-   HOME — Componentes adicionais
-   Colar APÓS o bloco do widget da Nova
-========================================== */
-
-/* Grid de três colunas */
-.three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-@media (max-width: 900px) {
-  .three-col {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Grid de quatro colunas */
-.four-col {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-@media (max-width: 1024px) {
-  .four-col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .four-col {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card de solução */
-.card-solution {
-  background: white;
-  border-radius: 16px;
-  padding: 36px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  border-top: 4px solid var(--accent);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-solution:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-/* Card destacado */
-.card-solution-featured {
-  background: var(--primary);
-  border-top: 4px solid var(--accent);
-}
-
-.card-solution-featured h3,
-.card-solution-featured p,
-.card-solution-featured li {
-  color: white;
-}
-
-/* Badge Mais procurado */
-.card-solution-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent);
-  color: white;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.75rem;
-  padding: 4px 16px;
-  border-radius: 20px;
-  white-space: nowrap;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-/* Ícone do card */
-.card-solution-icon {
-  font-size: 2.2rem;
-  line-height: 1;
-}
-
-/* Lista dentro do card */
-.card-solution-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.card-solution-list li {
-  font-size: 0.88rem;
-  padding-left: 20px;
-  position: relative;
-  color: var(--muted);
-}
-
-.card-solution-featured .card-solution-list li {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.card-solution-list li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.card-solution-featured .card-solution-list li::before {
-  color: white;
-}
-
-/* Empurra botão para o fim do card */
-.card-solution .btn {
-  margin-top: auto;
-  text-align: center;
-}
-
-/* Feature card — Por que a Novra */
-.feature-card {
-  background: white;
-  border-radius: 12px;
-  padding: 28px 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-3px);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.feature-card h4 {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  color: var(--primary);
-  margin-bottom: 8px;
-}
-
-.feature-card p {
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Botão outline */
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.25s ease, color 0.25s ease;
-}
-
-.btn-outline:hover {
-  background: var(--primary);
-  color: white;
-}
-
-.card-solution-featured .btn-outline {
-  border-color: white;
-  color: white;
-}
-
-.card-solution-featured .btn-outline:hover {
-  background: white;
-  color: var(--primary);
-}
-
-/* Section header */
-.section-header {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-}
-
-.section-header h2 {
-  margin-bottom: 16px;
-}
-
-.section-header .lead {
-  color: var(--muted);
 }
