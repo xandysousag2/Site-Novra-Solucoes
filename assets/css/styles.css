@@ -1145,3 +1145,214 @@ h3 {
     bottom: 90px;
   }
 }
+
+/* ==========================================
+   HOME — Componentes adicionais
+   Colar APÓS o bloco do widget da Nova
+========================================== */
+
+/* Grid de três colunas */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid de quatro colunas */
+.four-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .four-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .four-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card de solução */
+.card-solution {
+  background: white;
+  border-radius: 16px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border-top: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-solution:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Card destacado */
+.card-solution-featured {
+  background: var(--primary);
+  border-top: 4px solid var(--accent);
+}
+
+.card-solution-featured h3,
+.card-solution-featured p,
+.card-solution-featured li {
+  color: white;
+}
+
+/* Badge Mais procurado */
+.card-solution-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Ícone do card */
+.card-solution-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+/* Lista dentro do card */
+.card-solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-solution-list li {
+  font-size: 0.88rem;
+  padding-left: 20px;
+  position: relative;
+  color: var(--muted);
+}
+
+.card-solution-featured .card-solution-list li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-solution-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.card-solution-featured .card-solution-list li::before {
+  color: white;
+}
+
+/* Empurra botão para o fim do card */
+.card-solution .btn {
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Feature card — Por que a Novra */
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.feature-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Botão outline */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.card-solution-featured .btn-outline {
+  border-color: white;
+  color: white;
+}
+
+.card-solution-featured .btn-outline:hover {
+  background: white;
+  color: var(--primary);
+}
+
+/* Section header */
+.section-header {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  margin-bottom: 16px;
+}
+
+.section-header .lead {
+  color: var(--muted);
+}
