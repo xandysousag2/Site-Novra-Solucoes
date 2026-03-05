@@ -6,36 +6,41 @@
   <title>Eficiência Energética | Novra Soluções</title>
   <meta name="description" content="Projetos de eficiência energética via PEE da ANEEL para empresas de qualquer segmento. Modernize sua infraestrutura com recursos das distribuidoras — a custo zero ou pago pela própria economia gerada.">
 
-  <!-- Fontes -->
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
+  <!-- Estilos do projeto -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 
 <body>
 
-  <!-- ========== HEADER ========== -->
-  <!-- Fixo no topo, com logo linkando para a Home e navegação interna da página -->
+  <!-- ========== HEADER ==========
+       Fixo no topo. Logo leva à Home.
+       Links ancoram nas seções internas.
+       CTA abre WhatsApp com mensagem pré-preenchida.
+  =========================================== -->
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- Logo: clica e volta para a Home -->
       <a class="brand" href="../">
-        <img src="../assets/img/logo_topo.png" alt="Novra Soluções" style="max-height: 64px;">
+        <img src="../assets/img/logo_topo.png"
+             alt="Novra Soluções – especialistas em energia"
+             style="max-height: 64px;">
       </a>
 
-      <!-- Navegação: Home + âncoras internas + CTA WhatsApp -->
       <nav class="main-nav">
         <a href="../">Home</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#sistemas-inteligentes">Nossas soluções</a>
+        <a href="#nossas-solucoes">Nossas soluções</a>
         <a class="btn btn-primary"
-           href="https://wa.me/5541987377444?text=Quero%20falar%20com%20um%20especialista%20sobre%20Efici%C3%AAncia%20Energ%C3%A9tica%20e%20PEE"
-           target="_blank" rel="noopener">
-          Falar com especialista
+           href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+           target="_blank"
+           rel="noopener"
+           aria-label="Falar com especialista em eficiência energética pelo WhatsApp">
+          Analisar viabilidade
         </a>
       </nav>
 
@@ -44,12 +49,14 @@
 
   <main>
 
-    <!-- ========== HERO ========== -->
-    <!-- Proposta de valor principal + card flutuante de impacto -->
+    <!-- ========== HERO ==========
+         Proposta de valor principal.
+         Card flutuante reforça o impacto "100% Financiado".
+    =========================================== -->
     <section class="hero-section">
       <div class="container hero-grid">
 
-        <!-- Texto do hero -->
+        <!-- Texto -->
         <div class="hero-text">
           <div class="badge-orange">Engenharia e Projetos</div>
           <h1>Modernize sua infraestrutura com recursos das concessionárias.</h1>
@@ -60,26 +67,32 @@
           </p>
           <div class="hero-ctas">
             <a class="btn btn-primary"
-               href="https://wa.me/5541987377444?text=Quero%20avaliar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica"
-               target="_blank" rel="noopener">
+               href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+               target="_blank"
+               rel="noopener"
+               aria-label="Solicitar análise de viabilidade pelo WhatsApp">
               Analisar viabilidade
             </a>
           </div>
         </div>
 
-        <!-- Imagem + card flutuante "100% Financiado" -->
-        <div class="hero-visual" style="position: relative; display: flex; justify-content: flex-end;">
+        <!-- Imagem + card flutuante -->
+        <div class="hero-visual"
+             style="position: relative; display: flex; justify-content: flex-end;">
           <img src="../assets/img/hero-industria.jpg"
-               alt="Engenharia e infraestrutura industrial"
+               alt="Engenheiro avaliando infraestrutura industrial para projeto de eficiência energética"
                class="rounded-img"
                style="width: 100%; max-width: 90%; margin-right: 20px;">
 
           <div class="floating-card"
-               style="position: absolute; bottom: -30px; right: 0; width: 260px;
-                      padding: 25px; left: auto; transform: none;">
+               style="position: absolute; bottom: -30px; right: 0;
+                      width: 260px; padding: 25px; left: auto; transform: none;">
             <div class="kpi-number" style="font-size: 3rem; margin-bottom: 0;">100%</div>
-            <div style="font-weight: 800; color: var(--primary); font-size: 1.1rem;">Financiado*</div>
-            <div style="color: var(--muted); font-size: 0.8rem; line-height: 1.3; margin-top: 8px;">
+            <div style="font-weight: 800; color: var(--primary); font-size: 1.1rem;">
+              Financiado*
+            </div>
+            <div style="color: var(--muted); font-size: 0.8rem;
+                        line-height: 1.3; margin-top: 8px;">
               *Consulte as regras para o seu setor
             </div>
           </div>
@@ -88,8 +101,10 @@
       </div>
     </section>
 
-    <!-- ========== O QUE É O PEE ========== -->
-    <!-- Educação do visitante: explica o programa antes de falar de modelos -->
+    <!-- ========== O QUE É O PEE ==========
+         Educa o visitante antes de apresentar os modelos.
+         Texto aberto: qualquer setor pode participar.
+    =========================================== -->
     <section class="section bg-light">
       <div class="container two-col">
 
@@ -104,100 +119,161 @@
             Esses recursos existem para modernizar a infraestrutura de empresas que
             tenham potencial comprovado de redução de consumo. A Novra mapeia essas
             oportunidades, estrutura os projetos e conduz todo o processo de submissão
-            aos editais — em todo o território nacional.
+            junto à distribuidora — em todo o território nacional.
           </p>
           <p style="color: var(--muted); margin-bottom: 30px;">
-            Qualquer empresa com aplicação viável de redução de consumo pode participar.
-            Não há restrição de setor: o que define a elegibilidade é o potencial técnico
-            do projeto, não o ramo de atividade.
+            <strong>Qualquer empresa com potencial técnico de redução de consumo pode participar.</strong>
+            Não há restrição de setor ou porte: o que define a elegibilidade é a viabilidade
+            técnica do projeto, não o ramo de atividade.
           </p>
 
-          <!-- Logo ANEEL como elemento de credibilidade -->
-          <img src="../assets/img/aneel-logo.png"
-               alt="Programa de Eficiência Energética ANEEL"
-               style="max-height: 70px; width: auto; display: block;">
+          <!-- Selo de credibilidade -->
+          <div class="legal-seal">
+            <strong>Programa regulamentado pela ANEEL</strong> — As distribuidoras são
+            obrigadas por lei a destinar esses recursos. Os projetos seguem normas técnicas
+            e processos formais de aprovação, garantindo segurança jurídica para a empresa participante.
+          </div>
         </div>
 
         <div>
           <img
             src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Iluminação industrial eficiente"
-            class="rounded-img shadow-lg">
+            alt="Iluminação industrial eficiente resultado de projeto PEE ANEEL"
+            class="rounded-img"
+            style="box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
         </div>
 
       </div>
     </section>
 
-    <!-- ========== MODELOS DE FINANCIAMENTO ========== -->
-    <!-- id="como-funciona" para o link do menu funcionar -->
+    <!-- ========== MODELOS DE FINANCIAMENTO ==========
+         id="como-funciona" ancora o link do header.
+         Dois cards lado a lado descrevem os modelos.
+    =========================================== -->
     <section class="section" id="como-funciona">
       <div class="container">
 
         <div class="section-header text-center">
           <h2>Como funciona o financiamento?</h2>
-          <p class="lead">Modelos regulamentados e adaptados à realidade de cada empresa.</p>
+          <p class="lead">
+            Modelos regulamentados e adaptados à realidade de cada empresa,
+            com fluxo financeiro estruturado em contrato desde o primeiro dia.
+          </p>
         </div>
 
-        <div class="two-col" style="margin-top: 50px;">
+        <div class="two-col" style="margin-top: 50px; align-items: stretch;">
 
           <!-- Modelo 1: Fundo Perdido -->
           <div style="background: white; padding: 40px; border-radius: 16px;
                       box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-                      border-top: 5px solid #2E7D32;">
-            <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Fundo Perdido (Custo Zero)</h3>
+                      border-top: 5px solid #2E7D32;
+                      display: flex; flex-direction: column;">
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px; color: #2E7D32;">
+              Fundo Perdido
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--accent);
+                      font-weight: 700; margin-bottom: 20px; text-transform: uppercase;
+                      letter-spacing: 1px;">
+              Custo zero para o beneficiário
+            </p>
             <p style="color: var(--muted); margin-bottom: 20px;">
               Modalidade exclusiva para <strong>instituições filantrópicas com CEBAS válido</strong>
-              (hospitais, entidades assistenciais) e <strong>órgãos públicos</strong>
-              (prefeituras, universidades, autarquias).
+              (hospitais, santas casas, entidades assistenciais) e
+              <strong>órgãos públicos</strong> (prefeituras, universidades, autarquias).
             </p>
-            <ul style="list-style: none; padding: 0; color: var(--muted);">
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+
+            <ul style="list-style: none; padding: 0; color: var(--muted);
+                       flex-grow: 1; margin-bottom: 30px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Custo 100% coberto pela distribuidora
               </li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
-                — Nenhum investimento do beneficiário
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                — Nenhum investimento ou desembolso do beneficiário
               </li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Economia gerada reverte integralmente para a instituição
               </li>
-              <li style="padding: 8px 0;">
+              <li style="padding: 10px 0;">
                 — Exige comprovação de elegibilidade e projeto técnico aprovado
               </li>
             </ul>
+
+            <a class="btn btn-primary"
+               href="https://wa.me/5541987377444?text=Quero%20saber%20se%20minha%20institui%C3%A7%C3%A3o%20se%20enquadra%20no%20modelo%20de%20fundo%20perdido%20do%20PEE."
+               target="_blank"
+               rel="noopener"
+               style="text-align: center;"
+               aria-label="Verificar elegibilidade para fundo perdido pelo WhatsApp">
+              Verificar elegibilidade
+            </a>
           </div>
 
-          <!-- Modelo 2: Shared Savings -->
+          <!-- Modelo 2: Pago pela Economia Gerada -->
           <div style="background: white; padding: 40px; border-radius: 16px;
                       box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-                      border-top: 5px solid var(--accent);">
-            <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Pago pela Economia Gerada</h3>
-            <p style="color: var(--muted); margin-bottom: 20px;">
-              Modelo disponível para <strong>empresas privadas de qualquer segmento</strong>
-              com potencial técnico comprovado de redução de consumo energético.
+                      border-top: 5px solid var(--accent);
+                      display: flex; flex-direction: column;">
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px;">
+              Pago pela Economia Gerada
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--accent);
+                      font-weight: 700; margin-bottom: 20px; text-transform: uppercase;
+                      letter-spacing: 1px;">
+              Para empresas privadas de qualquer setor
             </p>
-            <ul style="list-style: none; padding: 0; color: var(--muted);">
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+            <p style="color: var(--muted); margin-bottom: 20px;">
+              Modelo disponível para <strong>qualquer empresa com potencial técnico comprovado
+              de redução de consumo energético</strong>, independentemente do setor de atuação
+              ou porte.
+            </p>
+
+            <ul style="list-style: none; padding: 0; color: var(--muted);
+                       flex-grow: 1; margin-bottom: 20px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Sem desembolso inicial para a empresa
               </li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — O projeto se paga com a própria economia gerada
               </li>
-              <li style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Após a quitação, toda a economia fica com a empresa
               </li>
-              <li style="padding: 8px 0;">
+              <li style="padding: 10px 0;">
                 — Aplicável em iluminação, climatização, motores e automação
               </li>
             </ul>
+
+            <!-- Frase embasada na minuta COPEL (cláusulas 4, 7 e 9) -->
+            <p style="font-size: 0.88rem; color: var(--muted);
+                      border-left: 3px solid var(--accent);
+                      padding-left: 14px; margin-bottom: 30px; line-height: 1.6;">
+              Todo o fluxo financeiro do projeto — desde os repasses para execução até
+              o ressarcimento à distribuidora, quando aplicável — é estruturado em contrato,
+              com <strong>cronograma físico-financeiro claro</strong> e condições de pagamento
+              previamente definidas, incluindo prazo, índice de correção e carência.
+            </p>
+
+            <a class="btn btn-accent"
+               href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+               target="_blank"
+               rel="noopener"
+               style="text-align: center;"
+               aria-label="Analisar viabilidade de projeto de eficiência energética pelo WhatsApp">
+              Analisar viabilidade
+            </a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ========== NOSSAS SOLUÇÕES EM ENGENHARIA ========== -->
-    <!-- id="sistemas-inteligentes" para o link do menu funcionar -->
-    <section class="section bg-light" id="sistemas-inteligentes">
+    <!-- ========== NOSSAS SOLUÇÕES EM ENGENHARIA ==========
+         id="nossas-solucoes" ancora o link do header.
+         Grade de cards com imagem no topo (card-image-top).
+    =========================================== -->
+    <section class="section bg-light" id="nossas-solucoes">
       <div class="container">
 
         <div class="section-header text-center">
@@ -208,32 +284,31 @@
           </p>
         </div>
 
-        <!-- Grade de cards com imagem no topo -->
         <div class="cards-3" style="margin-top: 50px;">
 
           <!-- Card 1: Iluminação LED -->
           <div class="card-image-top">
             <img src="../assets/img/eficiencia-iluminacao.jpg"
-                 alt="Projeto de iluminação LED industrial e comercial">
+                 alt="Projeto de retrofit de iluminação LED industrial e comercial">
             <div class="card-content">
               <h3 style="color: var(--primary);">Iluminação LED</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
-                Retrofit completo de iluminação para LED de alta eficiência em
-                ambientes industriais, comerciais e públicos. Redução média de
-                50% no consumo de iluminação.
+                Retrofit completo de iluminação para tecnologia LED em ambientes
+                industriais, comerciais e públicos. Projetos com redução de consumo
+                de até 70% e vida útil superior a 50.000 horas.
               </p>
             </div>
           </div>
 
-          <!-- Card 2: Usinas Fotovoltaicas -->
+          <!-- Card 2: Sistemas Fotovoltaicos -->
           <div class="card-image-top">
             <img src="../assets/img/eficiencia-fotovoltaica.jpg"
-                 alt="Projeto de usina fotovoltaica para geração própria">
+                 alt="Sistema fotovoltaico instalado em ambiente industrial">
             <div class="card-content">
-              <h3 style="color: var(--primary);">Usinas Fotovoltaicas</h3>
+              <h3 style="color: var(--primary);">Sistemas Fotovoltaicos</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
-                Projetos privados sob medida. Do estudo de viabilidade à construção
-                de UFVs para geração de energia limpa e independência da distribuidora.
+                Projetos de geração solar para autoprodução, com integração ao sistema
+                elétrico existente, medição de geração e monitoramento remoto em tempo real.
               </p>
             </div>
           </div>
@@ -241,11 +316,11 @@
           <!-- Card 3: Sistemas Inteligentes -->
           <div class="card-image-top">
             <img src="../assets/img/eficiencia-sistemas-inteligentes.jpg"
-                 alt="Painel de sistemas inteligentes com monitoramento em tempo real">
+                 alt="Painel de controle com sistemas inteligentes de monitoramento de energia">
             <div class="card-content">
               <h3 style="color: var(--primary);">Sistemas Inteligentes</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
-                Implantação de telemetria e inteligência aplicada para leitura
+                Implantação de telemetria e inteligência artificial para leitura
                 automática de medidores e gestão completa do consumo em tempo real.
               </p>
             </div>
@@ -253,14 +328,14 @@
 
           <!-- Card 4: Consultoria Energética -->
           <div class="card-image-top">
-            <img src="../assets/img/consultoria.png"
-                 alt="Consultoria energética para tomada de decisão">
+            <img src="../assets/img/eficiencia-consultoria.jpg"
+                 alt="Consultoria energética com análise de dados de consumo">
             <div class="card-content">
               <h3 style="color: var(--primary);">Consultoria Energética</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
                 Diagnósticos completos de plantas industriais e comerciais,
-                com relatórios que apoiam a tomada de decisão da diretoria
-                com base em dados reais.
+                com relatórios que apoiam a tomada de decisão com base
+                em dados reais de consumo e tarifação.
               </p>
             </div>
           </div>
@@ -268,13 +343,13 @@
           <!-- Card 5: Medição e Verificação -->
           <div class="card-image-top">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                 alt="Medição e verificação de resultados de eficiência energética">
+                 alt="Medição e verificação de resultados de projeto de eficiência energética">
             <div class="card-content">
               <h3 style="color: var(--primary);">Medição e Verificação (M&V)</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
                 Acompanhamento rigoroso pós-obra para garantir que a economia
                 projetada seja efetivamente alcançada, mensurada e comprovada
-                ao longo do tempo.
+                ao longo do tempo, conforme protocolo IPMVP.
               </p>
             </div>
           </div>
@@ -282,13 +357,13 @@
           <!-- Card 6: Climatização e Automação -->
           <div class="card-image-top">
             <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                 alt="Automação e climatização industrial eficiente">
+                 alt="Automação e climatização industrial com foco em eficiência energética">
             <div class="card-content">
               <h3 style="color: var(--primary);">Climatização e Automação</h3>
               <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
                 Modernização de sistemas de HVAC e automação de cargas para
-                reduzir o consumo de climatização, um dos maiores vilões
-                da conta de energia comercial e industrial.
+                reduzir o consumo de climatização — um dos maiores componentes
+                da conta de energia em ambientes comerciais e industriais.
               </p>
             </div>
           </div>
@@ -297,13 +372,17 @@
       </div>
     </section>
 
-    <!-- ========== PROCESSO / COMO TRABALHAMOS ========== -->
-    <!-- Fundo escuro com os 4 passos do projeto -->
+    <!-- ========== COMO CONDUZIMOS SEU PROJETO ==========
+         4 etapas do processo em fundo escuro.
+         Reforça método e previsibilidade do projeto.
+    =========================================== -->
     <section class="section bg-dark">
       <div class="container">
+
         <h2>Como conduzimos seu projeto</h2>
         <p class="lead" style="color: rgba(255,255,255,0.7); margin-top: 10px;">
-          Da primeira conversa à entrega final, um processo estruturado e transparente.
+          Da primeira conversa à entrega final, um processo estruturado,
+          transparente e com cronograma físico-financeiro definido em contrato.
         </p>
 
         <div class="process-grid">
@@ -314,7 +393,7 @@
             <p>
               Analisamos sua planta, equipamentos e perfil de consumo para
               identificar as oportunidades reais de redução e o modelo de
-              financiamento mais adequado ao seu caso.
+              financiamento mais adequado ao seu caso — sem custo inicial.
             </p>
           </div>
 
@@ -330,11 +409,11 @@
 
           <div class="process-step">
             <div class="step-num">03</div>
-            <h4>Submissão e aprovação</h4>
+            <h4>Aprovação e contratação</h4>
             <p>
-              Conduzimos o processo junto à concessionária ou financiador,
-              respondendo exigências técnicas e acompanhando a aprovação
-              até a liberação dos recursos.
+              Conduzimos o processo junto à concessionária ou financiador.
+              Após aprovação, o contrato define formalmente o cronograma de
+              implantação, repasses e condições de ressarcimento.
             </p>
           </div>
 
@@ -344,7 +423,7 @@
             <p>
               Gerenciamos a implantação com parceiros técnicos qualificados
               e realizamos a medição e verificação dos resultados para
-              garantir que a economia projetada seja entregue.
+              garantir que a economia projetada seja entregue e comprovada.
             </p>
           </div>
 
@@ -352,9 +431,30 @@
       </div>
     </section>
 
-    <!-- ========== FAQ ========== -->
-    <!-- Perguntas frequentes sobre o PEE e eficiência energética -->
-    <section class="section">
+    <!-- ========== CROSS-LINK INTERNO ==========
+         Direciona visitantes que precisam de outro tipo de solução.
+         Aumenta tempo de permanência e reduz taxa de saída.
+    =========================================== -->
+    <section class="section" style="padding: 60px 0;">
+      <div class="container text-center">
+        <p style="color: var(--muted); font-size: 1.05rem; max-width: 700px;
+                  margin: 0 auto 24px;">
+          Se além da eficiência você busca soluções de infraestrutura, medição
+          ou estruturas para a sua planta industrial, conheça também o nosso portfólio industrial.
+        </p>
+        <a class="btn btn-ghost"
+           href="../solucoes-industriais/"
+           aria-label="Ver portfólio completo de soluções industriais da Novra">
+          Ver Soluções Industriais
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ==========
+         Perguntas frequentes sobre PEE e eficiência energética.
+         faq.js controla abertura/fechamento de cada resposta.
+    =========================================== -->
+    <section class="section bg-light">
       <div class="container">
 
         <div class="section-header text-center">
@@ -366,14 +466,14 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Minha empresa pode participar do PEE mesmo não sendo indústria ou hospital?
+              Minha empresa pode participar mesmo não sendo indústria ou hospital?
             </button>
             <div class="faq-answer" hidden>
               Sim. O critério de elegibilidade é técnico, não setorial. Qualquer empresa
               — comércio, serviços, agronegócio, logística ou indústria — pode participar
               desde que haja potencial comprovado de redução de consumo energético.
-              Nossa equipe realiza o diagnóstico preliminar para verificar se o seu caso
-              se enquadra e qual a modalidade mais adequada.
+              Nossa equipe realiza o diagnóstico preliminar sem custo para verificar
+              se o seu caso se enquadra e qual a modalidade mais adequada.
             </div>
           </div>
 
@@ -383,10 +483,11 @@
             </button>
             <div class="faq-answer" hidden>
               O prazo varia conforme a complexidade do projeto e o cronograma do edital
-              da distribuidora. Em média, projetos menores levam de 6 a 12 meses do
-              diagnóstico à entrega. Projetos de maior escala podem levar mais tempo,
-              especialmente na fase de aprovação junto à concessionária. Nossa equipe
-              mantém você informado em cada etapa.
+              da distribuidora. Em média, projetos de menor escala levam de 6 a 12 meses
+              do diagnóstico à entrega. Projetos maiores podem levar mais tempo,
+              especialmente na fase de aprovação junto à concessionária.
+              Nossa equipe mantém você informado em cada etapa, com cronograma
+              físico-financeiro definido em contrato.
             </div>
           </div>
 
@@ -400,7 +501,20 @@
               beneficiário. No modelo pago pela economia gerada, o projeto é estruturado
               para que o retorno financeiro cubra o investimento — sem impacto no caixa
               durante a implantação. Em ambos os casos, o diagnóstico preliminar é
-              realizado sem custo.
+              realizado sem custo e sem compromisso.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              O fluxo financeiro fica definido antes do início da obra?
+            </button>
+            <div class="faq-answer" hidden>
+              Sim. Todo o fluxo financeiro — desde os repasses para execução até o
+              ressarcimento à distribuidora, quando aplicável — é formalizado em contrato
+              antes do início das obras. O contrato define o cronograma físico-financeiro,
+              condições de pagamento, índice de correção, prazo de carência e número
+              de parcelas. Não há surpresas financeiras durante ou após a implantação.
             </div>
           </div>
 
@@ -412,8 +526,8 @@
               As intervenções mais frequentes envolvem retrofit de iluminação para LED,
               modernização de sistemas de climatização (HVAC), substituição ou adequação
               de motores elétricos, automação de cargas e instalação de sistemas de
-              monitoramento e telemetria. A escolha depende do diagnóstico técnico e
-              do potencial de economia identificado na sua instalação.
+              monitoramento e telemetria. A escolha depende sempre do diagnóstico técnico
+              e do potencial de economia identificado na instalação.
             </div>
           </div>
 
@@ -433,8 +547,10 @@
       </div>
     </section>
 
-    <!-- ========== CTA FINAL ========== -->
-    <!-- Chamada para ação com fundo azul escuro e botão laranja -->
+    <!-- ========== CTA FINAL ==========
+         Fundo azul escuro com botão laranja.
+         Texto alinhado com a ação principal da página: analisar viabilidade.
+    =========================================== -->
     <section class="section text-center"
              style="background-color: var(--primary); color: white;">
       <div class="container">
@@ -446,11 +562,15 @@
            style="color: rgba(255,255,255,0.8); margin-bottom: 40px;
                   max-width: 700px; margin-left: auto; margin-right: auto;">
           Nossa equipe técnica realiza a análise preliminar e o enquadramento do seu
-          CNPJ nos editais vigentes sem nenhum compromisso.
+          CNPJ nos editais vigentes sem nenhum compromisso. Você descobre se há
+          viabilidade antes de qualquer decisão.
         </p>
+
         <a class="btn btn-accent"
-           href="https://wa.me/5541987377444?text=Quero%20avaliar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica"
-           target="_blank" rel="noopener"
+           href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+           target="_blank"
+           rel="noopener"
+           aria-label="Solicitar análise gratuita de viabilidade pelo WhatsApp"
            style="font-size: 1.2rem; padding: 18px 40px; border-radius: 50px;
                   box-shadow: 0 10px 20px rgba(0,0,0,0.2); color: white !important;
                   display: inline-block; text-decoration: none;">
@@ -462,8 +582,10 @@
 
   </main>
 
-  <!-- ========== SCRIPTS ========== -->
-  <!-- FAQ: abre/fecha perguntas com animação -->
+  <!-- ========== SCRIPTS ==========
+       faq.js: abre/fecha as respostas do FAQ com animação.
+       accordion.js: não é necessário nesta página (sem cards industriais).
+  =========================================== -->
   <script src="../assets/js/faq.js"></script>
 
 </body>
