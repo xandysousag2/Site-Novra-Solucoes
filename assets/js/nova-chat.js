@@ -55,17 +55,15 @@
     industrial: {
       welcome: 'Olá! Sou a <strong>Nova</strong>, assistente da Novra.<br><br>A Novra oferece soluções técnicas completas para indústrias — desde sistemas elétricos até aspiração central e tubulações industriais.<br><br>Me conta o que você precisa e te direciono para o especialista certo.',
       questions: [
-        { label: 'Painéis e quadros elétricos',    value: 'Vocês fornecem painéis e quadros elétricos?' },
-        { label: 'Sistemas de medição',             value: 'Como funcionam os sistemas de medição e telemetria?' },
-        { label: 'Tubos e irrigação',               value: 'Vocês trabalham com tubos para irrigação e saneamento?' },
-        { label: 'Falar com especialista técnico',  value: 'Quero falar com um especialista em soluções industriais.' }
+        { label: 'Painéis e quadros elétricos',   value: 'Vocês fornecem painéis e quadros elétricos?' },
+        { label: 'Sistemas de medição',            value: 'Como funcionam os sistemas de medição e telemetria?' },
+        { label: 'Tubos e irrigação',              value: 'Vocês trabalham com tubos para irrigação e saneamento?' },
+        { label: 'Falar com especialista técnico', value: 'Quero falar com um especialista em soluções industriais.' }
       ]
     }
 
   };
 
-  /* Garante config válida mesmo se NOVRA_PAGE
-     não for definido na página */
   var page    = (typeof NOVRA_PAGE !== 'undefined') ? NOVRA_PAGE : 'home';
   var context = NOVRA_CONFIG[page] || NOVRA_CONFIG['home'];
 
@@ -74,18 +72,16 @@
      2. REFERÊNCIAS AO DOM
   ========================================== */
 
-  var widget    = document.getElementById('novra-chat-widget');
-  var toggleBtn = document.getElementById('novra-chat-toggle');
-  var closeBtn  = document.getElementById('novra-chat-close');
-  var balloon   = document.getElementById('novra-chat-balloon');
-  var balloonX  = document.getElementById('novra-balloon-close');
+  var widget     = document.getElementById('novra-chat-widget');
+  var toggleBtn  = document.getElementById('novra-chat-toggle');
+  var closeBtn   = document.getElementById('novra-chat-close');
+  var balloon    = document.getElementById('novra-chat-balloon');
+  var balloonX   = document.getElementById('novra-balloon-close');
   var messagesEl = document.getElementById('novra-chat-messages');
-  var quickEl   = document.getElementById('novra-quick-questions');
-  var inputEl   = document.getElementById('novra-chat-input');
-  var sendBtn   = document.getElementById('novra-chat-send');
+  var quickEl    = document.getElementById('novra-quick-questions');
+  var inputEl    = document.getElementById('novra-chat-input');
+  var sendBtn    = document.getElementById('novra-chat-send');
 
-  /* Controla quantas trocas já aconteceram
-     para oferecer WhatsApp no momento certo */
   var exchangeCount = 0;
 
 
@@ -95,10 +91,8 @@
 
   function init() {
 
-    /* Mensagem de boas-vindas contextual */
     appendMessage(context.welcome, 'bot');
 
-    /* Perguntas rápidas contextuais */
     context.questions.forEach(function (q) {
       var btn = document.createElement('button');
       btn.textContent = q.label;
@@ -110,15 +104,12 @@
       quickEl.appendChild(btn);
     });
 
-    /* Balão de boas-vindas: aparece após 6s
-       se o chat ainda estiver fechado */
     setTimeout(function () {
       if (widget.classList.contains('novra-chat-closed') && balloon) {
         balloon.removeAttribute('hidden');
       }
     }, 6000);
 
-    /* Eventos de abrir e fechar */
     toggleBtn.addEventListener('click', openChat);
     closeBtn.addEventListener('click', closeChat);
 
@@ -128,19 +119,30 @@
       });
     }
 
-    /* Envio de mensagem pelo botão */
     sendBtn.addEventListener('click', function () {
       var text = inputEl.value.trim();
       if (text) handleUserMessage(text);
     });
 
-    /* Envio de mensagem pelo Enter */
     inputEl.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         var text = inputEl.value.trim();
         if (text) handleUserMessage(text);
       }
     });
+
+    /* Habilita/desabilita botão de envio conforme input */
+    inputEl.addEventListener('input', function () {
+      var hasText = inputEl.value.trim().length > 0;
+      sendBtn.disabled = !hasText;
+      sendBtn.style.opacity = hasText ? '1' : '0.45';
+      sendBtn.style.cursor  = hasText ? 'pointer' : 'not-allowed';
+    });
+
+    /* Estado inicial: desabilitado */
+    sendBtn.disabled = true;
+    sendBtn.style.opacity = '0.45';
+    sendBtn.style.cursor  = 'not-allowed';
   }
 
 
@@ -169,17 +171,19 @@
     hideQuickQuestions();
     exchangeCount++;
 
+    /* Desabilita envio enquanto aguarda resposta */
+    setInputLocked(true);
     showTyping();
 
-    /* Simula tempo de resposta humano (1.2s a 2s) */
     var delay = 1200 + Math.random() * 800;
 
     setTimeout(function () {
       removeTyping();
       var reply = simulateReply(text);
       appendMessage(reply, 'bot');
+      setInputLocked(false);
+      inputEl.focus();
 
-      /* Oferece WhatsApp após 3 trocas */
       if (exchangeCount >= 3) {
         setTimeout(offerWhatsApp, 800);
       }
@@ -187,11 +191,19 @@
     }, delay);
   }
 
+  /* Bloqueia ou libera o campo de envio */
+  function setInputLocked(locked) {
+    inputEl.disabled  = locked;
+    sendBtn.disabled  = locked;
+    sendBtn.style.opacity = locked ? '0.45' : '0.45'; /* mantém desabilitado até digitar */
+    sendBtn.style.cursor  = locked ? 'not-allowed' : 'not-allowed';
+    inputEl.style.opacity = locked ? '0.6' : '1';
+    inputEl.style.cursor  = locked ? 'not-allowed' : 'text';
+  }
+
 
   /* ==========================================
      6. MOTOR DE RESPOSTAS SIMULADAS
-     Detecta intenção por palavras-chave.
-     Substituir por callN8N() no sábado.
   ========================================== */
 
   function simulateReply(input) {
@@ -199,77 +211,86 @@
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '');
 
-    /* -- Energia por Assinatura -- */
+    /* Respostas prioritárias por página (contexto) */
+    if (page === 'assinatura') {
+      if (contains(msg, ['cancelar', 'sair', 'contrato', 'fidelidade', 'prazo', 'multa', 'rescisao'])) {
+        return 'Na Energia por Assinatura, o cancelamento é feito com aviso prévio, <strong>sem multas abusivas</strong>. O prazo exato é definido em contrato antes da adesão.<br><br>Você não fica preso a compromissos longos — essa flexibilidade é uma das principais vantagens do modelo.';
+      }
+    }
+
+    if (page === 'eficiencia') {
+      if (contains(msg, ['enquadra', 'elegivel', 'posso participar', 'minha empresa', 'se encaixa', 'quem pode'])) {
+        return 'Qualquer empresa com potencial técnico de redução de consumo pode participar do PEE — não há restrição de setor ou porte.<br><br>A elegibilidade é definida no diagnóstico preliminar, que a Novra realiza <strong>sem custo e sem compromisso</strong>.<br><br>Quer agendar essa análise agora?';
+      }
+      if (contains(msg, ['financiamento', 'financiado', 'custo zero', 'fundo perdido', 'pago pela economia'])) {
+        return 'Os projetos via PEE têm dois modelos:<br><br><ul><li><strong>Fundo perdido:</strong> para entidades filantrópicas com CEBAS e órgãos públicos. Custo zero.</li><li><strong>Pago pela economia gerada:</strong> o retorno financeiro do projeto cobre o investimento. Sem impacto no caixa.</li></ul>Em ambos, o diagnóstico preliminar é gratuito.';
+      }
+    }
+
+    if (page === 'industrial') {
+      if (contains(msg, ['painel', 'quadro eletrico', 'paineis'])) {
+        return 'Sim! A Novra fornece <strong>painéis e quadros elétricos</strong> para diferentes aplicações industriais — desde painéis de distribuição até quadros de comando e automação.<br><br>Trabalhamos com grandes fabricantes e podemos especificar a solução ideal para o seu ambiente. Quer detalhar sua necessidade?';
+      }
+      if (contains(msg, ['medicao', 'telemetria', 'medicao', 'medidor'])) {
+        return 'Nossos <strong>sistemas de medição e telemetria</strong> permitem monitorar consumo de energia, água e gás em tempo real, com leitura remota e geração de relatórios.<br><br>São ideais para indústrias que precisam de controle preciso e rastreabilidade do consumo. Quer conversar com um especialista técnico?';
+      }
+    }
+
+    /* Respostas gerais — funcionam em qualquer página */
+
     if (contains(msg, ['assinatura', 'como funciona', 'energia por', 'credito', 'usina', 'fazenda solar'])) {
-      return 'A Energia por Assinatura funciona assim: você continua recebendo energia normalmente pela sua distribuidora (Copel, Celesc ou Energisa), mas parte do seu consumo passa a ser compensado por créditos de uma usina parceira — com desconto garantido na tarifa de energia.<br><br>Sem obras, sem equipamentos, sem fidelidade abusiva. Você só passa a pagar menos pelo mesmo consumo.';
+      return 'A Energia por Assinatura funciona assim: você continua recebendo energia normalmente pela sua distribuidora, mas parte do seu consumo passa a ser compensado por créditos de uma usina parceira — com desconto garantido na tarifa.<br><br>Sem obras, sem equipamentos, sem fidelidade abusiva. Você só passa a pagar menos pelo mesmo consumo.';
     }
 
-    /* -- Distribuidora / permanece a mesma -- */
     if (contains(msg, ['copel', 'celesc', 'energisa', 'distribuidora', 'concessionaria', 'fornecedora', 'mesma', 'continua'])) {
-      return 'Sim, sua distribuidora continua sendo a mesma. A Copel, Celesc ou Energisa seguem responsáveis por entregar a energia com a mesma qualidade e atendimento de sempre.<br><br>O que muda é que uma usina parceira passa a injetar créditos de energia na sua conta — e esses créditos vêm com desconto já aplicado na tarifa.';
+      return 'Sim, sua distribuidora continua sendo a mesma. A Copel, Celesc ou Energisa seguem responsáveis por entregar a energia com a mesma qualidade e atendimento de sempre.<br><br>O que muda é que uma usina parceira passa a injetar créditos na sua conta — com desconto já aplicado na tarifa.';
     }
 
-    /* -- Economia / Desconto -- */
     if (contains(msg, ['econom', 'desconto', 'quanto', 'reducao', 'valor', 'fatura', 'conta', 'kw', 'kwh'])) {
-      return 'O desconto contratado é de <strong>20% sobre a tarifa de energia da distribuidora (sem impostos)</strong>. Quando olhamos o valor final da fatura, a economia líquida costuma ficar entre <strong>12% e 18%</strong>, dependendo do perfil de consumo.<br><br>Para uma simulação com os dados reais da sua empresa, o ideal é conversar com um especialista — leva menos de 5 minutos.';
+      return 'O desconto contratado é de <strong>20% sobre a tarifa de energia da distribuidora (sem impostos)</strong>. Na fatura final, a economia líquida costuma ficar entre <strong>12% e 18%</strong>, dependendo do perfil de consumo.<br><br>Para uma simulação com os dados da sua empresa, o ideal é falar com um especialista — leva menos de 5 minutos.';
     }
 
-    /* -- Cancelamento / Contrato -- */
     if (contains(msg, ['cancelar', 'sair', 'contrato', 'fidelidade', 'prazo', 'multa', 'rescisao'])) {
-      return 'O contrato de Energia por Assinatura permite cancelamento com aviso prévio, <strong>sem multas abusivas</strong>. O prazo e as condições são definidos em contrato antes da adesão.<br><br>Essa flexibilidade é uma das vantagens do modelo — você não fica preso a compromissos longos.';
+      return 'O contrato permite cancelamento com aviso prévio, <strong>sem multas abusivas</strong>. O prazo e as condições são definidos antes da adesão.<br><br>Essa flexibilidade é uma das vantagens do modelo.';
     }
 
-    /* -- PEE / Eficiência Energética -- */
-    if (contains(msg, ['pee', 'aneel', 'eficiencia', 'modernizar', 'obra', 'iluminacao', 'led', 'motor', 'climatizacao', 'hvac', 'telemetria', 'automacao'])) {
-      return 'Pelo <strong>Programa de Eficiência Energética (PEE) da ANEEL</strong>, as distribuidoras são obrigadas a investir em projetos que reduzam o consumo de energia das empresas.<br><br>A Novra estrutura esses projetos e conduz todo o processo. Os modelos são:<br><ul><li><strong>Fundo perdido:</strong> para entidades filantrópicas com CEBAS e órgãos públicos</li><li><strong>Pago pela economia gerada:</strong> o projeto se paga com a própria redução de custo</li></ul>Nenhum dos dois impacta seu caixa durante a implantação.';
+    if (contains(msg, ['pee', 'aneel', 'eficiencia', 'modernizar', 'iluminacao', 'led', 'motor', 'climatizacao', 'hvac'])) {
+      return 'Pelo <strong>PEE da ANEEL</strong>, as distribuidoras investem em projetos que reduzem o consumo das empresas. A Novra estrutura e conduz todo o processo.<br><br>Os modelos são custo zero (fundo perdido para entidades elegíveis) ou pago pela própria economia gerada — sem impacto no caixa em ambos os casos.';
     }
 
-    /* -- Enquadramento / Elegibilidade -- */
-    if (contains(msg, ['enquadra', 'elegivel', 'posso participar', 'minha empresa', 'se encaixa', 'quem pode'])) {
-      return 'Qualquer empresa com potencial técnico de redução de consumo pode participar do PEE. Não há restrição de setor ou porte.<br><br>O que define a elegibilidade é a <strong>viabilidade técnica do projeto</strong> — identificada no diagnóstico preliminar, que a Novra realiza sem custo e sem compromisso.<br><br>Quer que eu te conecte com um especialista para essa análise?';
+    if (contains(msg, ['enquadra', 'elegivel', 'posso participar', 'minha empresa', 'quem pode'])) {
+      return 'Qualquer empresa com potencial de redução de consumo pode participar. A elegibilidade é definida no diagnóstico preliminar, que a Novra realiza <strong>sem custo e sem compromisso</strong>.<br><br>Quer que eu te conecte com um especialista para essa análise?';
     }
 
-    /* -- Financiamento do PEE -- */
-    if (contains(msg, ['financiamento', 'financiado', 'custo zero', 'fundo perdido', 'pago pela economia', 'investimento', 'recurso'])) {
-      return 'Os projetos via PEE têm dois modelos de financiamento:<br><br><ul><li><strong>Fundo perdido:</strong> exclusivo para entidades filantrópicas com CEBAS válido e órgãos públicos. Sem nenhum custo para o beneficiário.</li><li><strong>Pago pela economia gerada:</strong> o retorno financeiro do projeto cobre o investimento ao longo do tempo. Sem impacto no caixa.</li></ul>Em ambos os casos, o diagnóstico preliminar é gratuito.';
-    }
-
-    /* -- Prazo de projetos -- */
     if (contains(msg, ['prazo', 'tempo', 'quanto tempo', 'demora', 'cronograma', 'quando'])) {
-      return 'O prazo varia conforme a complexidade do projeto e o cronograma do edital da distribuidora.<br><br>Em média, projetos de menor escala levam de <strong>6 a 12 meses</strong> do diagnóstico à entrega. Projetos maiores podem levar mais tempo, especialmente na fase de aprovação junto à concessionária.<br><br>Todo o cronograma físico-financeiro é definido em contrato antes do início das obras.';
+      return 'O prazo varia conforme a complexidade do projeto. Em média, projetos de menor escala levam de <strong>6 a 12 meses</strong> do diagnóstico à entrega.<br><br>Todo o cronograma físico-financeiro é definido em contrato antes do início das obras.';
     }
 
-    /* -- Soluções Industriais -- */
-    if (contains(msg, ['industrial', 'industria', 'painel', 'quadro eletrico', 'medicao', 'telemetria', 'tubo', 'irrigacao', 'saneamento', 'aspiracao', 'transformador', 'protecao', 'surto'])) {
-      return 'A Novra trabalha com <strong>soluções técnicas para indústrias</strong> em todo o Brasil, incluindo:<br><br><ul><li>Painéis e quadros elétricos</li><li>Sistemas de medição e telemetria</li><li>Tubos e conexões para irrigação e saneamento</li><li>Aspiração central para ambientes corporativos</li><li>Proteção contra surtos e transformadores</li></ul>Atuamos com grandes fabricantes e parceiros técnicos nacionais. Quer detalhar sua necessidade?';
+    if (contains(msg, ['industrial', 'industria', 'painel', 'quadro eletrico', 'medicao', 'telemetria', 'tubo', 'irrigacao', 'aspiracao', 'transformador', 'protecao', 'surto'])) {
+      return 'A Novra trabalha com <strong>soluções técnicas para indústrias</strong> em todo o Brasil:<br><br><ul><li>Painéis e quadros elétricos</li><li>Sistemas de medição e telemetria</li><li>Tubos e conexões para irrigação e saneamento</li><li>Aspiração central</li><li>Proteção contra surtos e transformadores</li></ul>Quer detalhar sua necessidade?';
     }
 
-    /* -- Quem é a Novra -- */
-    if (contains(msg, ['novra', 'quem', 'sobre', 'empresa', 'historia', 'experiencia', 'anos', 'confiavel', 'parceria'])) {
-      return 'A <strong>Novra Soluções</strong> atua com energia e soluções técnicas industriais para empresas em todo o Brasil.<br><br>Reunimos mais de 15 anos de experiência em energia e engenharia, com parcerias estratégicas com fabricantes e empresas de alta capacidade técnica.<br><br>Atendemos empresas em Energia por Assinatura (PR, SC e MS), projetos de Eficiência Energética e fornecimento de Soluções Industriais.';
+    if (contains(msg, ['novra', 'quem', 'sobre', 'empresa', 'historia', 'experiencia', 'anos', 'confiavel'])) {
+      return 'A <strong>Novra Soluções</strong> atua com energia e soluções técnicas industriais em todo o Brasil.<br><br>Reunimos mais de 15 anos de experiência em energia e engenharia, com parcerias estratégicas com grandes fabricantes nacionais.<br><br>Atuamos em Energia por Assinatura (PR, SC e MS), Eficiência Energética via PEE e Soluções Industriais.';
     }
 
-    /* -- Ver soluções / o que vocês fazem -- */
-    if (contains(msg, ['solucoes', 'o que voces fazem', 'o que a novra', 'servicos', 'areas', 'segmentos'])) {
-      return 'A Novra atua em três frentes principais:<br><br><ul><li><strong>Energia por Assinatura:</strong> redução imediata de 12–18% na conta de energia, sem obras</li><li><strong>Eficiência Energética via PEE:</strong> modernização da infraestrutura financiada pela distribuidora</li><li><strong>Soluções Industriais:</strong> painéis, sistemas de medição, tubulações e mais</li></ul>Quer que eu explique alguma delas com mais detalhe?';
+    if (contains(msg, ['solucoes', 'o que voces fazem', 'servicos', 'areas', 'segmentos'])) {
+      return 'A Novra atua em três frentes:<br><br><ul><li><strong>Energia por Assinatura:</strong> redução de 12–18% na conta, sem obras</li><li><strong>Eficiência Energética via PEE:</strong> modernização financiada pela distribuidora</li><li><strong>Soluções Industriais:</strong> painéis, medição, tubulações e mais</li></ul>Quer que eu explique alguma delas com mais detalhe?';
     }
 
-    /* -- Falar com especialista / WhatsApp -- */
+    if (contains(msg, ['onde', 'regiao', 'estado', 'cidade', 'atende', 'parana', 'santa catarina', 'mato grosso', 'brasil', 'nacional'])) {
+      return 'A Novra atende em todo o Brasil para Eficiência Energética e Soluções Industriais.<br><br>Para <strong>Energia por Assinatura</strong>, a atuação atual está nos estados do <strong>Paraná, Santa Catarina e Mato Grosso do Sul</strong>, dentro das áreas de concessão da Copel, Celesc e Energisa.';
+    }
+
+    if (contains(msg, ['simular', 'simulacao', 'calculo', 'calcular', 'estimar'])) {
+      return 'Para simular com precisão, precisamos de alguns dados:<br><br><ul><li>Valor médio da conta de energia (R$)</li><li>Consumo médio em kWh</li><li>Sua distribuidora (Copel, Celesc ou Energisa)</li></ul>O ideal é fazer essa análise com um especialista pelo WhatsApp — leva menos de 5 minutos e já sai com o número real de economia.';
+    }
+
     if (contains(msg, ['especialista', 'humano', 'pessoa', 'falar', 'whatsapp', 'zap', 'ligar', 'contato', 'atendimento'])) {
       return 'Claro! Nosso time está disponível agora mesmo.<br><br>Clique em <strong>"Abrir WhatsApp"</strong> aqui embaixo e um especialista te atende em poucos minutos.';
     }
 
-    /* -- Simulação / Cálculo -- */
-    if (contains(msg, ['simular', 'simulacao', 'calculo', 'calcular', 'estimar'])) {
-      return 'Para simular com precisão, precisamos de alguns dados da sua empresa:<br><br><ul><li>Valor médio da conta de energia (R$)</li><li>Consumo médio em kWh</li><li>Sua distribuidora (Copel, Celesc ou Energisa)</li></ul>O ideal é fazer essa análise com um especialista pelo WhatsApp — leva menos de 5 minutos e já sai com o número real de economia.';
-    }
-
-    /* -- Atuação / Regiões -- */
-    if (contains(msg, ['onde', 'regiao', 'estado', 'cidade', 'atende', 'parana', 'santa catarina', 'mato grosso', 'brasil', 'nacional'])) {
-      return 'A Novra atende empresas em todo o Brasil nos projetos de Eficiência Energética e Soluções Industriais.<br><br>Para a <strong>Energia por Assinatura</strong>, a atuação atual está concentrada nos estados do <strong>Paraná, Santa Catarina e Mato Grosso do Sul</strong>, dentro das áreas de concessão da Copel, Celesc e Energisa.';
-    }
-
-    /* -- Fallback inteligente -- */
+    /* Fallback */
     return 'Entendi sua dúvida. Para garantir uma resposta precisa sobre esse ponto, o melhor caminho é conversar diretamente com um especialista da Novra.<br><br>Clique em <strong>"Abrir WhatsApp"</strong> aqui embaixo — a conversa leva menos de 1 minuto.';
   }
 
@@ -278,14 +299,12 @@
      7. UTILITÁRIOS
   ========================================== */
 
-  /* Verifica se alguma palavra-chave está na mensagem */
   function contains(text, keywords) {
     return keywords.some(function (kw) {
       return text.indexOf(kw) !== -1;
     });
   }
 
-  /* Adiciona mensagem na área de chat */
   function appendMessage(html, type) {
     var wrapper = document.createElement('div');
     wrapper.className = 'novra-msg novra-msg-' + type;
@@ -299,7 +318,6 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  /* Exibe indicador "Nova está digitando..." */
   function showTyping() {
     var typing = document.createElement('div');
     typing.className = 'novra-msg novra-msg-bot novra-typing';
@@ -309,18 +327,15 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  /* Remove indicador de digitando */
   function removeTyping() {
     var el = document.getElementById('novra-typing-indicator');
     if (el) el.remove();
   }
 
-  /* Oculta perguntas rápidas após primeiro uso */
   function hideQuickQuestions() {
     if (quickEl) quickEl.style.display = 'none';
   }
 
-  /* Oferece WhatsApp após algumas trocas */
   function offerWhatsApp() {
     if (document.getElementById('novra-wpp-offer')) return;
 
@@ -336,18 +351,18 @@
 
   /* ==========================================
      8. PONTE PARA N8N
-     Descomente e ative no sábado quando
-     a infra estiver pronta.
+     Descomente e ative quando a infra
+     estiver pronta.
 
      Passos para ativar:
      1. Descomente callN8N() abaixo
      2. Substitua 'SEU_WEBHOOK_N8N_AQUI' pela
-        URL real do webhook do N8N
+        URL real do webhook
      3. Em handleUserMessage(), substitua:
            var reply = simulateReply(text);
         por:
            var reply = await callN8N(text);
-        e adicione async na função.
+        e adicione async na função pai.
   ========================================== */
 
   /*
@@ -356,23 +371,10 @@
       var response = await fetch('SEU_WEBHOOK_N8N_AQUI', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: text,
-          page: page
-        })
+        body: JSON.stringify({ message: text, page: page })
       });
       var data = await response.json();
       return data.reply || 'Não consegui processar sua pergunta agora. Tente pelo WhatsApp.';
     } catch (err) {
-      return 'Tive um problema técnico agora. Você pode falar com um especialista pelo WhatsApp aqui embaixo.';
-    }
-  }
-  */
+      return 'Tive um problema
 
-
-  /* ==========================================
-     INICIAR
-  ========================================== */
-  init();
-
-})();
