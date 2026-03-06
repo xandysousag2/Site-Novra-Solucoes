@@ -587,7 +587,53 @@
        accordion.js: não é necessário nesta página (sem cards industriais).
   =========================================== -->
   <script src="../assets/js/faq.js"></script>
+<div id="novra-chat-widget" class="novra-chat-closed">
+  <button id="novra-chat-toggle" class="novra-chat-toggle" aria-label="Abrir chat com a Nova">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+         fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+  <div id="novra-chat-balloon" class="novra-chat-balloon" hidden>
+    Olá! Posso te ajudar com dúvidas sobre Eficiência Energética?
+    <button id="novra-balloon-close" aria-label="Fechar">×</button>
+  </div>
+  <div class="novra-chat-window" role="dialog" aria-label="Chat com a Nova">
+    <div class="novra-chat-header">
+      <div class="novra-chat-avatar">N</div>
+      <div>
+        <div class="novra-chat-title">Nova</div>
+        <div class="novra-chat-subtitle">Assistente Novra · Online agora</div>
+      </div>
+      <button id="novra-chat-close" class="novra-chat-close" aria-label="Fechar chat">×</button>
+    </div>
+    <div id="novra-chat-messages" class="novra-chat-messages" role="log" aria-live="polite"></div>
+    <div id="novra-quick-questions" class="novra-quick-questions"></div>
+    <div class="novra-chat-input-area">
+      <input id="novra-chat-input" type="text" placeholder="Digite sua dúvida..."
+             autocomplete="off" aria-label="Digite sua mensagem" />
+      <button id="novra-chat-send" class="novra-chat-send" aria-label="Enviar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+    <div class="novra-chat-footer">
+      Prefere falar diretamente?
+      <a href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Novra%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+         target="_blank" rel="noopener">Abrir WhatsApp</a>
+    </div>
+  </div>
+</div>
 
+<script>var NOVRA_PAGE = 'eficiencia';</script>
+<script src="../assets/js/nova-chat.js"></script>
 </body>
 </html>
+  
+</body>
+</html>
+
 
