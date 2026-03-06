@@ -3,131 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eficiência Energética via PEE | Novra Soluções</title>
-  <meta name="description" content="A Novra estrutura projetos de eficiência energética financiados pelo PEE da ANEEL — sem custo para sua empresa. Iluminação LED, climatização, motores e automação em todo o Brasil." />
+  <title>Eficiência Energética | Novra Soluções</title>
+  <meta name="description" content="Projetos de eficiência energética via PEE da ANEEL para empresas de qualquer segmento. Modernize sua infraestrutura com recursos das distribuidoras — a custo zero ou pago pela própria economia gerada.">
 
+  <!-- Fontes Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Estilos do projeto -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 
 <body>
 
+  <!-- ========== HEADER ==========
+       Fixo no topo. Logo leva à Home.
+       Links ancoram nas seções internas.
+       CTA abre WhatsApp com mensagem pré-preenchida.
+  =========================================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">
+
+      <a class="brand" href="../">
         <img src="../assets/img/logo_topo.png"
-             alt="Novra Soluções"
+             alt="Novra Soluções – especialistas em energia"
              style="max-height: 64px;">
       </a>
+
       <nav class="main-nav">
-        <a href="/">Home</a>
+        <a href="../">Home</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#nossas-solucoes">Nossas soluções</a>
         <a class="btn btn-primary"
-           href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Novra%20e%20gostaria%20de%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica."
+           href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
            target="_blank"
-           rel="noopener">
+           rel="noopener"
+           aria-label="Falar com especialista em eficiência energética pelo WhatsApp">
           Analisar viabilidade
         </a>
       </nav>
+
     </div>
   </header>
 
   <main>
 
-    <!-- ========== HERO ========== -->
+    <!-- ========== HERO ==========
+         Proposta de valor principal.
+         Card flutuante reforça o impacto "100% Financiado".
+    =========================================== -->
     <section class="hero-section">
       <div class="container hero-grid">
+
+        <!-- Texto -->
         <div class="hero-text">
-          <div class="badge-orange">Eficiência Energética · PEE/ANEEL</div>
-          <h1>Modernize sua empresa sem gastar nada.</h1>
+          <div class="badge-orange">Engenharia e Projetos</div>
+          <h1>Modernize sua infraestrutura com recursos das concessionárias.</h1>
           <p class="lead">
-            A Novra estrutura projetos de eficiência energética financiados
-            pelo Programa de Eficiência Energética da ANEEL — sem desembolso
-            inicial para sua empresa. Iluminação LED, climatização, motores
-            e automação em todo o Brasil.
+            Aprovamos e executamos projetos de eficiência energética através do PEE da ANEEL.
+            Viabilizamos a modernização da sua empresa com modelos a fundo perdido ou
+            pagos com a própria economia gerada — sem impacto no seu caixa.
           </p>
           <div class="hero-ctas">
             <a class="btn btn-primary"
-               href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20gostaria%20de%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica."
-               target="_blank" rel="noopener">
+               href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+               target="_blank"
+               rel="noopener"
+               aria-label="Solicitar análise de viabilidade pelo WhatsApp">
               Analisar viabilidade
             </a>
-            <a class="btn btn-outline" href="#como-funciona">
-              Como funciona
-            </a>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="../assets/img/hero-eficiencia.jpg"
-               alt="Infraestrutura industrial modernizada com eficiência energética"
-               width="600" height="480"
-               style="border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
-        </div>
-      </div>
-    </section>
 
-    <!-- ========== O QUE É O PEE ========== -->
-    <section class="section bg-light" id="como-funciona">
-      <div class="container">
-        <div class="two-col" style="align-items: center; gap: 60px;">
+        <!-- Imagem + card flutuante -->
+        <div class="hero-visual"
+             style="position: relative; display: flex; justify-content: flex-end;">
+          <img src="../assets/img/hero-industria.jpg"
+               alt="Engenheiro avaliando infraestrutura industrial para projeto de eficiência energética"
+               class="rounded-img"
+               style="width: 100%; max-width: 90%; margin-right: 20px;">
 
-          <div>
-            <div class="badge-orange">Programa regulamentado pela ANEEL</div>
-            <h2>O que é o PEE da ANEEL?</h2>
-            <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
-              Por determinação da ANEEL, todas as distribuidoras de energia do Brasil
-              são obrigadas a investir parte de sua receita no
-              <strong>Programa de Eficiência Energética (PEE)</strong>.
-            </p>
-            <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.8;">
-              Esses recursos existem para modernizar a infraestrutura de empresas que
-              tenham potencial comprovado de redução de consumo. A Novra mapeia essas
-              oportunidades, estrutura os projetos e conduz todo o processo de submissão
-              junto à distribuidora — em todo o território nacional.
-            </p>
-            <p style="color: var(--text); font-weight: 700; margin-bottom: 20px;">
-              Qualquer empresa com potencial técnico de redução de consumo pode participar.
-              Não há restrição de setor ou porte: o que define a elegibilidade é a
-              viabilidade técnica do projeto, não o ramo de atividade.
-            </p>
-
-            <div style="background: #EEF4FF; border-left: 4px solid var(--primary-light);
-                        padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px;">
-              <p style="font-size: 0.9rem; color: var(--primary); line-height: 1.7;">
-                <strong>Programa regulamentado pela ANEEL</strong> — As distribuidoras são
-                obrigadas por lei a destinar esses recursos. Os projetos seguem normas técnicas
-                e processos formais de aprovação, garantindo segurança jurídica para a empresa
-                participante.
-              </p>
+          <div class="floating-card"
+               style="position: absolute; bottom: -30px; right: 0;
+                      width: 260px; padding: 25px; left: auto; transform: none;">
+            <div class="kpi-number" style="font-size: 3rem; margin-bottom: 0;">100%</div>
+            <div style="font-weight: 800; color: var(--primary); font-size: 1.1rem;">
+              Financiado*
             </div>
-
-            <!-- BLOCO 1: parágrafo de transição para projetos privados -->
-            <p style="color: var(--muted); line-height: 1.8; margin-top: 8px;">
-              Para muitos clientes, o PEE é o caminho ideal — permite modernizar a
-              infraestrutura <strong>sem nenhum desembolso inicial</strong>. Mas nem
-              sempre ele é o único caminho, ou o mais rápido. Em alguns casos, tratar
-              o projeto como um <strong>investimento privado direto</strong> permite
-              antecipar resultados e ter mais liberdade na escolha de escopo e
-              fornecedores.
-            </p>
+            <div style="color: var(--muted); font-size: 0.8rem;
+                        line-height: 1.3; margin-top: 8px;">
+              *Consulte as regras para o seu setor
+            </div>
           </div>
-
-          <div>
-            <img src="../assets/img/pee-aneel.jpg"
-                 alt="Equipamento industrial modernizado via PEE ANEEL"
-                 style="border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.1);">
-          </div>
-
         </div>
+
       </div>
     </section>
 
-    <!-- ========== COMO FUNCIONA O FINANCIAMENTO ========== -->
-    <section class="section" id="financiamento">
+    <!-- ========== O QUE É O PEE ==========
+         Educa o visitante antes de apresentar os modelos.
+         Texto aberto: qualquer setor pode participar.
+    =========================================== -->
+    <section class="section bg-light">
+      <div class="container two-col">
+
+        <div>
+          <h2 style="margin-bottom: 20px;">O que é o PEE da ANEEL?</h2>
+          <p class="lead" style="color: var(--muted);">
+            Por determinação da ANEEL, todas as distribuidoras de energia do Brasil são
+            obrigadas a investir parte de sua receita no
+            <strong>Programa de Eficiência Energética (PEE)</strong>.
+          </p>
+          <p style="color: var(--muted); margin-bottom: 20px;">
+            Esses recursos existem para modernizar a infraestrutura de empresas que
+            tenham potencial comprovado de redução de consumo. A Novra mapeia essas
+            oportunidades, estrutura os projetos e conduz todo o processo de submissão
+            junto à distribuidora — em todo o território nacional.
+          </p>
+          <p style="color: var(--muted); margin-bottom: 30px;">
+            <strong>Qualquer empresa com potencial técnico de redução de consumo pode participar.</strong>
+            Não há restrição de setor ou porte: o que define a elegibilidade é a viabilidade
+            técnica do projeto, não o ramo de atividade.
+          </p>
+
+          <!-- Selo de credibilidade -->
+          <div class="legal-seal">
+            <strong>Programa regulamentado pela ANEEL</strong> — As distribuidoras são
+            obrigadas por lei a destinar esses recursos. Os projetos seguem normas técnicas
+            e processos formais de aprovação, garantindo segurança jurídica para a empresa participante.
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Iluminação industrial eficiente resultado de projeto PEE ANEEL"
+            class="rounded-img"
+            style="box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== MODELOS DE FINANCIAMENTO ==========
+         id="como-funciona" ancora o link do header.
+         Dois cards lado a lado descrevem os modelos.
+    =========================================== -->
+    <section class="section" id="como-funciona">
       <div class="container">
 
         <div class="section-header text-center">
@@ -138,367 +161,269 @@
           </p>
         </div>
 
-        <div class="two-col" style="margin-top: 50px; gap: 30px; align-items: stretch;">
+        <div class="two-col" style="margin-top: 50px; align-items: stretch;">
 
-          <!-- Card Fundo Perdido -->
-          <div style="border: 2px solid #2E7D32; border-radius: 16px; padding: 40px;
-                      display: flex; flex-direction: column; gap: 16px;">
-            <div>
-              <h3 style="color: #2E7D32; margin-bottom: 4px;">Fundo Perdido</h3>
-              <p style="color: var(--accent); font-weight: 700; font-size: 0.85rem;
-                         text-transform: uppercase; letter-spacing: 1px;">
-                Custo zero para o beneficiário
-              </p>
-            </div>
-            <p style="color: var(--muted); line-height: 1.8;">
-              Modalidade exclusiva para <strong>instituições filantrópicas com CEBAS
-              válido</strong> (hospitais, santas casas, entidades assistenciais) e
+          <!-- Modelo 1: Fundo Perdido -->
+          <div style="background: white; padding: 40px; border-radius: 16px;
+                      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+                      border-top: 5px solid #2E7D32;
+                      display: flex; flex-direction: column;">
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px; color: #2E7D32;">
+              Fundo Perdido
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--accent);
+                      font-weight: 700; margin-bottom: 20px; text-transform: uppercase;
+                      letter-spacing: 1px;">
+              Custo zero para o beneficiário
+            </p>
+            <p style="color: var(--muted); margin-bottom: 20px;">
+              Modalidade exclusiva para <strong>instituições filantrópicas com CEBAS válido</strong>
+              (hospitais, santas casas, entidades assistenciais) e
               <strong>órgãos públicos</strong> (prefeituras, universidades, autarquias).
             </p>
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
+
+            <ul style="list-style: none; padding: 0; color: var(--muted);
+                       flex-grow: 1; margin-bottom: 30px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Custo 100% coberto pela distribuidora
               </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Nenhum investimento ou desembolso do beneficiário
               </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                 — Economia gerada reverte integralmente para a instituição
               </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
+              <li style="padding: 10px 0;">
                 — Exige comprovação de elegibilidade e projeto técnico aprovado
-              </li>
-            </ul>
-            <div style="margin-top: auto; padding-top: 24px;">
-              <a class="btn btn-primary"
-                 href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20gostaria%20de%20verificar%20a%20elegibilidade%20da%20minha%20institui%C3%A7%C3%A3o%20para%20o%20PEE%20fundo%20perdido."
-                 target="_blank" rel="noopener"
-                 style="display: block; text-align: center;">
-                Verificar elegibilidade
-              </a>
-            </div>
-          </div>
-
-          <!-- Card Pago pela Economia Gerada -->
-          <div style="border: 2px solid var(--accent); border-radius: 16px; padding: 40px;
-                      display: flex; flex-direction: column; gap: 16px;">
-            <div>
-              <h3 style="color: var(--primary); margin-bottom: 4px;">Pago pela Economia Gerada</h3>
-              <p style="color: var(--accent); font-weight: 700; font-size: 0.85rem;
-                         text-transform: uppercase; letter-spacing: 1px;">
-                Para empresas privadas de qualquer setor
-              </p>
-            </div>
-            <p style="color: var(--muted); line-height: 1.8;">
-              Modelo disponível para <strong>qualquer empresa com potencial técnico
-              comprovado de redução de consumo energético</strong>, independentemente
-              do setor de atuação ou porte.
-            </p>
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
-                — Sem desembolso inicial para a empresa
-              </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
-                — O projeto se paga com a própria economia gerada
-              </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
-                — Após a quitação, toda a economia fica com a empresa
-              </li>
-              <li style="color: var(--muted); border-top: 1px solid #eee; padding-top: 10px;">
-                — Aplicável em iluminação, climatização, motores e automação
-              </li>
-            </ul>
-            <div style="background: #FFF5EE; border-left: 3px solid var(--accent);
-                        padding: 14px 16px; border-radius: 0 8px 8px 0; margin-top: 4px;">
-              <p style="font-size: 0.88rem; color: var(--text); line-height: 1.7;">
-                Todo o fluxo financeiro do projeto — desde os repasses para execução
-                até o ressarcimento à distribuidora, quando aplicável — é estruturado
-                em contrato, com <strong>cronograma físico-financeiro claro</strong>
-                e condições de pagamento previamente definidas, incluindo prazo,
-                índice de correção e carência.
-              </p>
-            </div>
-            <div style="margin-top: auto; padding-top: 24px;">
-              <a class="btn btn-accent"
-                 href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20gostaria%20de%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
-                 target="_blank" rel="noopener"
-                 style="display: block; text-align: center;">
-                Analisar viabilidade
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== BLOCO 2: PROJETOS PRIVADOS ========== -->
-    <section class="section bg-light" id="projetos-privados">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="badge-orange">Alternativa ao PEE</div>
-          <h2>Quando vale investir com recursos próprios?</h2>
-          <p class="lead">
-            Nem todo projeto precisa esperar um edital ou se enquadrar nas regras
-            da distribuidora. Às vezes a melhor decisão é tratar a eficiência
-            energética como o que ela é: um investimento com retorno mensurável.
-          </p>
-        </div>
-
-        <div class="two-col" style="margin-top: 56px; align-items: start; gap: 48px;">
-
-          <div>
-            <h3 style="margin-bottom: 24px;">Quando o projeto privado faz mais sentido</h3>
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 24px;">
-
-              <li style="display: flex; gap: 16px; align-items: flex-start;">
-                <span style="min-width: 32px; height: 32px; background: var(--accent);
-                             border-radius: 50%; display: flex; align-items: center;
-                             justify-content: center; color: white; font-weight: 700;
-                             font-size: 0.85rem; flex-shrink: 0;">1</span>
-                <div>
-                  <strong style="display: block; margin-bottom: 6px; color: var(--primary);">
-                    Payback curto
-                  </strong>
-                  <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-                    Quando a economia gerada recupera o investimento em 12 a 36 meses,
-                    o projeto privado costuma ser mais ágil e menos burocrático que o PEE.
-                  </p>
-                </div>
-              </li>
-
-              <li style="display: flex; gap: 16px; align-items: flex-start;">
-                <span style="min-width: 32px; height: 32px; background: var(--accent);
-                             border-radius: 50%; display: flex; align-items: center;
-                             justify-content: center; color: white; font-weight: 700;
-                             font-size: 0.85rem; flex-shrink: 0;">2</span>
-                <div>
-                  <strong style="display: block; margin-bottom: 6px; color: var(--primary);">
-                    Urgência na modernização
-                  </strong>
-                  <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-                    Equipamentos obsoletos que impactam a operação não podem esperar
-                    o cronograma de aprovação de um edital PEE, que pode levar meses.
-                  </p>
-                </div>
-              </li>
-
-              <li style="display: flex; gap: 16px; align-items: flex-start;">
-                <span style="min-width: 32px; height: 32px; background: var(--accent);
-                             border-radius: 50%; display: flex; align-items: center;
-                             justify-content: center; color: white; font-weight: 700;
-                             font-size: 0.85rem; flex-shrink: 0;">3</span>
-                <div>
-                  <strong style="display: block; margin-bottom: 6px; color: var(--primary);">
-                    Liberdade de escopo
-                  </strong>
-                  <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-                    No projeto privado, você define o escopo exato — sem precisar
-                    seguir as especificações técnicas exigidas pela distribuidora
-                    para aprovação no PEE.
-                  </p>
-                </div>
-              </li>
-
-              <li style="display: flex; gap: 16px; align-items: flex-start;">
-                <span style="min-width: 32px; height: 32px; background: var(--accent);
-                             border-radius: 50%; display: flex; align-items: center;
-                             justify-content: center; color: white; font-weight: 700;
-                             font-size: 0.85rem; flex-shrink: 0;">4</span>
-                <div>
-                  <strong style="display: block; margin-bottom: 6px; color: var(--primary);">
-                    Empresa não se enquadra no PEE
-                  </strong>
-                  <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-                    Se o perfil técnico ou o setor não atende aos critérios da
-                    distribuidora, o projeto privado garante que a modernização
-                    aconteça do mesmo jeito.
-                  </p>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-
-          <div style="background: white; border-radius: 16px; padding: 40px;
-                      box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: sticky; top: 100px;">
-
-            <h3 style="margin-bottom: 8px;">Como a Novra conduz um projeto privado</h3>
-            <p style="color: var(--muted); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.7;">
-              O processo é o mesmo de um projeto PEE — a diferença é que o
-              financiamento vem da própria economia gerada ou de recursos da empresa,
-              sem passar pela distribuidora.
-            </p>
-
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px;">
-              <li style="display: flex; gap: 12px; align-items: center;">
-                <span style="color: var(--accent); font-size: 1.1rem; font-weight: 700;">✓</span>
-                <span style="color: var(--text); font-size: 0.95rem;">
-                  Diagnóstico energético gratuito
-                </span>
-              </li>
-              <li style="display: flex; gap: 12px; align-items: center;">
-                <span style="color: var(--accent); font-size: 1.1rem; font-weight: 700;">✓</span>
-                <span style="color: var(--text); font-size: 0.95rem;">
-                  Estudo de viabilidade com projeção de ROI
-                </span>
-              </li>
-              <li style="display: flex; gap: 12px; align-items: center;">
-                <span style="color: var(--accent); font-size: 1.1rem; font-weight: 700;">✓</span>
-                <span style="color: var(--text); font-size: 0.95rem;">
-                  Projeto técnico completo e execução
-                </span>
-              </li>
-              <li style="display: flex; gap: 12px; align-items: center;">
-                <span style="color: var(--accent); font-size: 1.1rem; font-weight: 700;">✓</span>
-                <span style="color: var(--text); font-size: 0.95rem;">
-                  Relatório de economia real gerada pós-implantação
-                </span>
               </li>
             </ul>
 
             <a class="btn btn-primary"
-               href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20projeto%20privado%20de%20efici%C3%AAncia%20energ%C3%A9tica%20e%20gostaria%20de%20entender%20a%20viabilidade."
-               target="_blank" rel="noopener"
-               style="display: block; text-align: center;">
-              Analisar viabilidade do meu projeto
+               href="https://wa.me/5541987377444?text=Quero%20saber%20se%20minha%20institui%C3%A7%C3%A3o%20se%20enquadra%20no%20modelo%20de%20fundo%20perdido%20do%20PEE."
+               target="_blank"
+               rel="noopener"
+               style="text-align: center;"
+               aria-label="Verificar elegibilidade para fundo perdido pelo WhatsApp">
+              Verificar elegibilidade
             </a>
+          </div>
 
-            <p style="margin-top: 14px; font-size: 0.83rem; color: var(--muted); text-align: center;">
-              Análise inicial gratuita e sem compromisso. Ao final, você decide
-              se segue via PEE ou com recursos próprios.
+          <!-- Modelo 2: Pago pela Economia Gerada -->
+          <div style="background: white; padding: 40px; border-radius: 16px;
+                      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+                      border-top: 5px solid var(--accent);
+                      display: flex; flex-direction: column;">
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px;">
+              Pago pela Economia Gerada
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--accent);
+                      font-weight: 700; margin-bottom: 20px; text-transform: uppercase;
+                      letter-spacing: 1px;">
+              Para empresas privadas de qualquer setor
+            </p>
+            <p style="color: var(--muted); margin-bottom: 20px;">
+              Modelo disponível para <strong>qualquer empresa com potencial técnico comprovado
+              de redução de consumo energético</strong>, independentemente do setor de atuação
+              ou porte.
             </p>
 
+            <ul style="list-style: none; padding: 0; color: var(--muted);
+                       flex-grow: 1; margin-bottom: 20px;">
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                — Sem desembolso inicial para a empresa
+              </li>
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                — O projeto se paga com a própria economia gerada
+              </li>
+              <li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                — Após a quitação, toda a economia fica com a empresa
+              </li>
+              <li style="padding: 10px 0;">
+                — Aplicável em iluminação, climatização, motores e automação
+              </li>
+            </ul>
+
+            <!-- Frase embasada na minuta COPEL (cláusulas 4, 7 e 9) -->
+            <p style="font-size: 0.88rem; color: var(--muted);
+                      border-left: 3px solid var(--accent);
+                      padding-left: 14px; margin-bottom: 30px; line-height: 1.6;">
+              Todo o fluxo financeiro do projeto — desde os repasses para execução até
+              o ressarcimento à distribuidora, quando aplicável — é estruturado em contrato,
+              com <strong>cronograma físico-financeiro claro</strong> e condições de pagamento
+              previamente definidas, incluindo prazo, índice de correção e carência.
+            </p>
+
+            <a class="btn btn-accent"
+               href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+               target="_blank"
+               rel="noopener"
+               style="text-align: center;"
+               aria-label="Analisar viabilidade de projeto de eficiência energética pelo WhatsApp">
+              Analisar viabilidade
+            </a>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ========== NOSSAS SOLUÇÕES ========== -->
-    <section class="section" id="nossas-solucoes">
+    <!-- ========== NOSSAS SOLUÇÕES EM ENGENHARIA ==========
+         id="nossas-solucoes" ancora o link do header.
+         Grade de cards com imagem no topo (card-image-top).
+    =========================================== -->
+    <section class="section bg-light" id="nossas-solucoes">
       <div class="container">
 
         <div class="section-header text-center">
           <h2>Nossas Soluções em Engenharia</h2>
-          <p class="lead">
-            Projetos técnicos completos, da análise à execução,
-            com os melhores fabricantes do mercado.
+          <p class="lead" style="max-width: 780px; margin-left: auto; margin-right: auto;">
+            Do diagnóstico à entrega, atuamos em todas as frentes que impactam
+            o consumo e a eficiência energética da sua operação.
           </p>
         </div>
 
-        <div class="three-col" style="margin-top: 50px;">
+        <div class="cards-3" style="margin-top: 50px;">
 
-          <div class="card-solution">
-            <div class="card-solution-icon">💡</div>
-            <h3>Iluminação LED</h3>
-            <p style="color: var(--muted); margin-bottom: 16px;">
-              Substituição de sistemas de iluminação convencionais por LED de alta
-              eficiência, com sensores de presença e automação.
-            </p>
-            <ul class="card-solution-list">
-              <li>Redução de até 70% no consumo de iluminação</li>
-              <li>Sensores de presença e automação</li>
-              <li>Compatível com PEE e projetos privados</li>
-            </ul>
+          <!-- Card 1: Iluminação LED -->
+          <div class="card-image-top">
+            <img src="../assets/img/eficiencia-iluminacao.jpg"
+                 alt="Projeto de retrofit de iluminação LED industrial e comercial">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Iluminação LED</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Retrofit completo de iluminação para tecnologia LED em ambientes
+                industriais, comerciais e públicos. Projetos com redução de consumo
+                de até 70% e vida útil superior a 50.000 horas.
+              </p>
+            </div>
           </div>
 
-          <div class="card-solution">
-            <div class="card-solution-icon">❄️</div>
-            <h3>Climatização Eficiente</h3>
-            <p style="color: var(--muted); margin-bottom: 16px;">
-              Modernização de sistemas de ar-condicionado e refrigeração industrial
-              com tecnologia inverter e controle inteligente.
-            </p>
-            <ul class="card-solution-list">
-              <li>Tecnologia inverter e controle de zona</li>
-              <li>Integração com BMS (Building Management System)</li>
-              <li>Redução significativa na demanda de pico</li>
-            </ul>
+          <!-- Card 2: Sistemas Fotovoltaicos -->
+          <div class="card-image-top">
+            <img src="../assets/img/eficiencia-fotovoltaica.jpg"
+                 alt="Sistema fotovoltaico instalado em ambiente industrial">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Sistemas Fotovoltaicos</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Projetos de geração solar para autoprodução, com integração ao sistema
+                elétrico existente, medição de geração e monitoramento remoto em tempo real.
+              </p>
+            </div>
           </div>
 
-          <div class="card-solution">
-            <div class="card-solution-icon">⚙️</div>
-            <h3>Motores e Automação</h3>
-            <p style="color: var(--muted); margin-bottom: 16px;">
-              Substituição de motores de indução por modelos de alta eficiência
-              e instalação de inversores de frequência.
-            </p>
-            <ul class="card-solution-list">
-              <li>Motores IE3 e IE4 de alta eficiência</li>
-              <li>Inversores de frequência e soft-starters</li>
-              <li>Monitoramento e telemetria em tempo real</li>
-            </ul>
+          <!-- Card 3: Sistemas Inteligentes -->
+          <div class="card-image-top">
+            <img src="../assets/img/eficiencia-sistemas-inteligentes.jpg"
+                 alt="Painel de controle com sistemas inteligentes de monitoramento de energia">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Sistemas Inteligentes</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Implantação de telemetria e inteligência artificial para leitura
+                automática de medidores e gestão completa do consumo em tempo real.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Consultoria Energética -->
+          <div class="card-image-top">
+            <img src="../assets/img/consultoria.png""
+                 alt="Consultoria energética com análise de dados de consumo">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Consultoria Energética</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Diagnósticos completos de plantas industriais e comerciais,
+                com relatórios que apoiam a tomada de decisão com base
+                em dados reais de consumo e tarifação.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Medição e Verificação -->
+          <div class="card-image-top">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                 alt="Medição e verificação de resultados de projeto de eficiência energética">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Medição e Verificação (M&V)</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Acompanhamento rigoroso pós-obra para garantir que a economia
+                projetada seja efetivamente alcançada, mensurada e comprovada
+                ao longo do tempo, conforme protocolo IPMVP.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: Climatização e Automação -->
+          <div class="card-image-top">
+            <img src="../assets/img/chiller.jpg""
+                 alt="Automação e climatização industrial com foco em eficiência energética">
+            <div class="card-content">
+              <h3 style="color: var(--primary);">Climatização e Automação</h3>
+              <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">
+                Modernização de sistemas de HVAC e automação de cargas para
+                reduzir o consumo de climatização — um dos maiores componentes
+                da conta de energia em ambientes comerciais e industriais.
+              </p>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ========== COMO CONDUZIMOS ========== -->
-    <section class="section bg-light" id="processo">
+    <!-- ========== COMO CONDUZIMOS SEU PROJETO ==========
+         4 etapas do processo em fundo escuro.
+         Reforça método e previsibilidade do projeto.
+    =========================================== -->
+    <section class="section bg-dark">
       <div class="container">
 
-        <div class="section-header text-center">
-          <h2>Como conduzimos seu projeto</h2>
-          <p class="lead">
-            Da análise inicial à entrega final, a Novra cuida de cada etapa —
-            você foca no seu negócio.
-          </p>
-        </div>
+        <h2>Como conduzimos seu projeto</h2>
+        <p class="lead" style="color: rgba(255,255,255,0.7); margin-top: 10px;">
+          Da primeira conversa à entrega final, um processo estruturado,
+          transparente e com cronograma físico-financeiro definido em contrato.
+        </p>
 
-        <div class="process-grid" style="margin-top: 50px; display: grid;
-             grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <div class="process-grid">
 
-          <div style="text-align: center; padding: 30px 20px;">
-            <div style="width: 56px; height: 56px; background: var(--primary);
-                        border-radius: 50%; display: flex; align-items: center;
-                        justify-content: center; margin: 0 auto 20px;
-                        color: white; font-family: var(--font-heading);
-                        font-weight: 900; font-size: 1.2rem;">1</div>
-            <h4 style="margin-bottom: 10px;">Diagnóstico</h4>
-            <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">
-              Levantamento técnico gratuito do consumo e da infraestrutura atual
-              da sua empresa.
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <h4>Diagnóstico técnico</h4>
+            <p>
+              Analisamos sua planta, equipamentos e perfil de consumo para
+              identificar as oportunidades reais de redução e o modelo de
+              financiamento mais adequado ao seu caso — sem custo inicial.
             </p>
           </div>
 
-          <div style="text-align: center; padding: 30px 20px;">
-            <div style="width: 56px; height: 56px; background: var(--primary);
-                        border-radius: 50%; display: flex; align-items: center;
-                        justify-content: center; margin: 0 auto 20px;
-                        color: white; font-family: var(--font-heading);
-                        font-weight: 900; font-size: 1.2rem;">2</div>
-            <h4 style="margin-bottom: 10px;">Viabilidade</h4>
-            <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">
-              Estudo técnico e financeiro com projeção de economia, payback
-              e modelo de financiamento mais adequado.
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <h4>Estruturação do projeto</h4>
+            <p>
+              Desenvolvemos o projeto técnico completo, com memorial descritivo,
+              planilhas de M&V e toda a documentação exigida pelo edital
+              da distribuidora ou pelo contrato privado.
             </p>
           </div>
 
-          <div style="text-align: center; padding: 30px 20px;">
-            <div style="width: 56px; height: 56px; background: var(--primary);
-                        border-radius: 50%; display: flex; align-items: center;
-                        justify-content: center; margin: 0 auto 20px;
-                        color: white; font-family: var(--font-heading);
-                        font-weight: 900; font-size: 1.2rem;">3</div>
-            <h4 style="margin-bottom: 10px;">Aprovação</h4>
-            <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">
-              Elaboração do projeto técnico e condução do processo junto
-              à distribuidora ou aprovação interna.
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <h4>Aprovação e contratação</h4>
+            <p>
+              Conduzimos o processo junto à concessionária ou financiador.
+              Após aprovação, o contrato define formalmente o cronograma de
+              implantação, repasses e condições de ressarcimento.
             </p>
           </div>
 
-          <div style="text-align: center; padding: 30px 20px;">
-            <div style="width: 56px; height: 56px; background: var(--accent);
-                        border-radius: 50%; display: flex; align-items: center;
-                        justify-content: center; margin: 0 auto 20px;
-                        color: white; font-family: var(--font-heading);
-                        font-weight: 900; font-size: 1.2rem;">4</div>
-            <h4 style="margin-bottom: 10px;">Execução</h4>
-            <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">
-              Implantação completa com equipe técnica especializada e
-              relatório de economia gerada ao final.
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <h4>Execução e verificação</h4>
+            <p>
+              Gerenciamos a implantação com parceiros técnicos qualificados
+              e realizamos a medição e verificação dos resultados para
+              garantir que a economia projetada seja entregue e comprovada.
             </p>
           </div>
 
@@ -506,197 +431,208 @@
       </div>
     </section>
 
-    <!-- ========== FAQ ========== -->
-    <section class="section" id="faq">
+    <!-- ========== CROSS-LINK INTERNO ==========
+         Direciona visitantes que precisam de outro tipo de solução.
+         Aumenta tempo de permanência e reduz taxa de saída.
+    =========================================== -->
+    <section class="section" style="padding: 60px 0;">
+      <div class="container text-center">
+        <p style="color: var(--muted); font-size: 1.05rem; max-width: 700px;
+                  margin: 0 auto 24px;">
+          Se além da eficiência você busca soluções de infraestrutura, medição
+          ou estruturas para a sua planta industrial, conheça também o nosso portfólio industrial.
+        </p>
+        <a class="btn btn-ghost"
+           href="../solucoes-industriais/"
+           aria-label="Ver portfólio completo de soluções industriais da Novra">
+          Ver Soluções Industriais
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ==========
+         Perguntas frequentes sobre PEE e eficiência energética.
+         faq.js controla abertura/fechamento de cada resposta.
+    =========================================== -->
+    <section class="section bg-light">
       <div class="container">
 
         <div class="section-header text-center">
           <h2>Perguntas frequentes</h2>
-          <p class="lead">
-            As dúvidas mais comuns sobre eficiência energética e o PEE da ANEEL.
-          </p>
+          <p class="lead">Tire suas dúvidas antes de falar com a nossa equipe.</p>
         </div>
 
-        <div style="max-width: 800px; margin: 50px auto 0; display: flex;
-                    flex-direction: column; gap: 16px;">
+        <div class="faq-list">
 
-          <details style="background: var(--bg-light); border-radius: 12px;
-                          padding: 24px; cursor: pointer;">
-            <summary style="font-weight: 700; color: var(--primary);
-                            font-family: var(--font-heading); font-size: 1rem;
-                            list-style: none; display: flex;
-                            justify-content: space-between; align-items: center;">
-              Minha empresa precisa ser grande para participar?
-              <span style="color: var(--accent); font-size: 1.3rem;">+</span>
-            </summary>
-            <p style="color: var(--muted); margin-top: 16px; line-height: 1.8;">
-              Não. O que define a elegibilidade é o potencial técnico de redução de
-              consumo, não o porte da empresa. Pequenas e médias empresas participam
-              normalmente, desde que o projeto demonstre redução mensurável de energia.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Minha empresa pode participar mesmo não sendo indústria ou hospital?
+            </button>
+            <div class="faq-answer" hidden>
+              Sim. O critério de elegibilidade é técnico, não setorial. Qualquer empresa
+              — comércio, serviços, agronegócio, logística ou indústria — pode participar
+              desde que haja potencial comprovado de redução de consumo energético.
+              Nossa equipe realiza o diagnóstico preliminar sem custo para verificar
+              se o seu caso se enquadra e qual a modalidade mais adequada.
+            </div>
+          </div>
 
-          <details style="background: var(--bg-light); border-radius: 12px;
-                          padding: 24px; cursor: pointer;">
-            <summary style="font-weight: 700; color: var(--primary);
-                            font-family: var(--font-heading); font-size: 1rem;
-                            list-style: none; display: flex;
-                            justify-content: space-between; align-items: center;">
-              A empresa precisa trocar de distribuidora?
-              <span style="color: var(--accent); font-size: 1.3rem;">+</span>
-            </summary>
-            <p style="color: var(--muted); margin-top: 16px; line-height: 1.8;">
-              Não. O projeto é realizado em parceria com a própria distribuidora
-              da região. Você continua sendo cliente dela normalmente — o que muda
-              é que parte dos recursos obrigatórios do PEE são direcionados para
-              o seu projeto.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quanto tempo leva um projeto de eficiência energética via PEE?
+            </button>
+            <div class="faq-answer" hidden>
+              O prazo varia conforme a complexidade do projeto e o cronograma do edital
+              da distribuidora. Em média, projetos de menor escala levam de 6 a 12 meses
+              do diagnóstico à entrega. Projetos maiores podem levar mais tempo,
+              especialmente na fase de aprovação junto à concessionária.
+              Nossa equipe mantém você informado em cada etapa, com cronograma
+              físico-financeiro definido em contrato.
+            </div>
+          </div>
 
-          <details style="background: var(--bg-light); border-radius: 12px;
-                          padding: 24px; cursor: pointer;">
-            <summary style="font-weight: 700; color: var(--primary);
-                            font-family: var(--font-heading); font-size: 1rem;
-                            list-style: none; display: flex;
-                            justify-content: space-between; align-items: center;">
-              Quanto tempo leva um projeto de eficiência energética?
-              <span style="color: var(--accent); font-size: 1.3rem;">+</span>
-            </summary>
-            <p style="color: var(--muted); margin-top: 16px; line-height: 1.8;">
-              Depende do modelo. Projetos via PEE levam entre 6 e 18 meses do
-              diagnóstico à execução, por conta das etapas de aprovação junto
-              à distribuidora. Projetos privados costumam ser mais ágeis —
-              entre 2 e 6 meses da análise à entrega final.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Existe algum custo para a minha empresa durante o processo?
+            </button>
+            <div class="faq-answer" hidden>
+              Depende da modalidade. No modelo a fundo perdido (exclusivo para entidades
+              filantrópicas com CEBAS e órgãos públicos), não há nenhum custo para o
+              beneficiário. No modelo pago pela economia gerada, o projeto é estruturado
+              para que o retorno financeiro cubra o investimento — sem impacto no caixa
+              durante a implantação. Em ambos os casos, o diagnóstico preliminar é
+              realizado sem custo e sem compromisso.
+            </div>
+          </div>
 
-          <details style="background: var(--bg-light); border-radius: 12px;
-                          padding: 24px; cursor: pointer;">
-            <summary style="font-weight: 700; color: var(--primary);
-                            font-family: var(--font-heading); font-size: 1rem;
-                            list-style: none; display: flex;
-                            justify-content: space-between; align-items: center;">
-              Como é feita a análise inicial?
-              <span style="color: var(--accent); font-size: 1.3rem;">+</span>
-            </summary>
-            <p style="color: var(--muted); margin-top: 16px; line-height: 1.8;">
-              A análise inicial é gratuita e pode começar com uma conversa pelo
-              WhatsApp. Nossa equipe levanta os dados básicos de consumo, identifica
-              as oportunidades e apresenta um estudo de viabilidade preliminar —
-              sem nenhum compromisso da sua parte.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              O fluxo financeiro fica definido antes do início da obra?
+            </button>
+            <div class="faq-answer" hidden>
+              Sim. Todo o fluxo financeiro — desde os repasses para execução até o
+              ressarcimento à distribuidora, quando aplicável — é formalizado em contrato
+              antes do início das obras. O contrato define o cronograma físico-financeiro,
+              condições de pagamento, índice de correção, prazo de carência e número
+              de parcelas. Não há surpresas financeiras durante ou após a implantação.
+            </div>
+          </div>
 
-          <details style="background: var(--bg-light); border-radius: 12px;
-                          padding: 24px; cursor: pointer;">
-            <summary style="font-weight: 700; color: var(--primary);
-                            font-family: var(--font-heading); font-size: 1rem;
-                            list-style: none; display: flex;
-                            justify-content: space-between; align-items: center;">
-              E se minha empresa não se enquadrar no PEE?
-              <span style="color: var(--accent); font-size: 1.3rem;">+</span>
-            </summary>
-            <p style="color: var(--muted); margin-top: 16px; line-height: 1.8;">
-              Sem problema. Nesse caso avaliamos juntos se um projeto privado
-              faz sentido — com payback definido, financiamento pela própria
-              economia gerada e toda a execução conduzida pela Novra. A modernização
-              acontece de qualquer forma.
-            </p>
-          </details>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quais tipos de intervenção são mais comuns nos projetos?
+            </button>
+            <div class="faq-answer" hidden>
+              As intervenções mais frequentes envolvem retrofit de iluminação para LED,
+              modernização de sistemas de climatização (HVAC), substituição ou adequação
+              de motores elétricos, automação de cargas e instalação de sistemas de
+              monitoramento e telemetria. A escolha depende sempre do diagnóstico técnico
+              e do potencial de economia identificado na instalação.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              A Novra atua em todo o Brasil?
+            </button>
+            <div class="faq-answer" hidden>
+              Sim. A Novra mantém parcerias com empresas de alta capacidade técnica
+              em diferentes regiões do país, o que nos permite estruturar e executar
+              projetos de eficiência energética em todo o território nacional,
+              independentemente da distribuidora responsável pela concessão.
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ========== CTA FINAL ========== -->
-    <section class="section bg-dark" style="text-align: center;">
-      <div class="container" style="max-width: 700px;">
-        <h2 style="color: white; margin-bottom: 16px;">
-          Pronto para reduzir o custo de energia da sua empresa?
+    <!-- ========== CTA FINAL ==========
+         Fundo azul escuro com botão laranja.
+         Texto alinhado com a ação principal da página: analisar viabilidade.
+    =========================================== -->
+    <section class="section text-center"
+             style="background-color: var(--primary); color: white;">
+      <div class="container">
+
+        <h2 style="color: white; margin-bottom: 20px; font-size: 2.5rem;">
+          Vamos avaliar o potencial da sua empresa?
         </h2>
-        <p style="color: rgba(255,255,255,0.7); margin-bottom: 36px; font-size: 1.1rem;">
-          A análise inicial é gratuita e sem compromisso. Nossa equipe avalia
-          o melhor caminho — PEE ou projeto privado — e apresenta os números reais.
+        <p class="lead"
+           style="color: rgba(255,255,255,0.8); margin-bottom: 40px;
+                  max-width: 700px; margin-left: auto; margin-right: auto;">
+          Nossa equipe técnica realiza a análise preliminar e o enquadramento do seu
+          CNPJ nos editais vigentes sem nenhum compromisso. Você descobre se há
+          viabilidade antes de qualquer decisão.
         </p>
+
         <a class="btn btn-accent"
-           href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20an%C3%A1lise%20de%20viabilidade%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
-           target="_blank" rel="noopener"
-           style="font-size: 1.1rem; padding: 18px 40px;">
-          Analisar viabilidade agora
+           href="https://wa.me/5541987377444?text=Quero%20analisar%20a%20viabilidade%20de%20um%20projeto%20de%20efici%C3%AAncia%20energ%C3%A9tica%20para%20minha%20empresa."
+           target="_blank"
+           rel="noopener"
+           aria-label="Solicitar análise gratuita de viabilidade pelo WhatsApp"
+           style="font-size: 1.2rem; padding: 18px 40px; border-radius: 50px;
+                  box-shadow: 0 10px 20px rgba(0,0,0,0.2); color: white !important;
+                  display: inline-block; text-decoration: none;">
+          Solicitar análise gratuita
         </a>
-        <p style="color: rgba(255,255,255,0.5); margin-top: 16px; font-size: 0.85rem;">
-          Gratuito · Sem compromisso · Resposta em até 1 dia útil
-        </p>
+
       </div>
     </section>
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer style="background: #050E1A; padding: 40px 0; text-align: center;">
-    <div class="container">
-      <img src="../assets/img/logo_topo.png" alt="Novra Soluções"
-           style="max-height: 48px; margin: 0 auto 20px; opacity: 0.8;">
-      <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">
-        © 2025 Novra Soluções. Todos os direitos reservados.
-      </p>
+  <!-- ========== SCRIPTS ==========
+       faq.js: abre/fecha as respostas do FAQ com animação.
+       accordion.js: não é necessário nesta página (sem cards industriais).
+  =========================================== -->
+  <script src="../assets/js/faq.js"></script>
+<div id="novra-chat-widget" class="novra-chat-closed">
+  <button id="novra-chat-toggle" class="novra-chat-toggle" aria-label="Abrir chat com a Nova">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+         fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+  <div id="novra-chat-balloon" class="novra-chat-balloon" hidden>
+    Olá! Posso te ajudar com dúvidas sobre Eficiência Energética?
+    <button id="novra-balloon-close" aria-label="Fechar">×</button>
+  </div>
+  <div class="novra-chat-window" role="dialog" aria-label="Chat com a Nova">
+    <div class="novra-chat-header">
+      <div class="novra-chat-avatar">N</div>
+      <div>
+        <div class="novra-chat-title">Nova</div>
+        <div class="novra-chat-subtitle">Assistente Novra · Online agora</div>
+      </div>
+      <button id="novra-chat-close" class="novra-chat-close" aria-label="Fechar chat">×</button>
     </div>
-  </footer>
-
-  <!-- ========== WIDGET NOVA ========== -->
-  <div id="novra-chat-widget" class="novra-chat-closed">
-
-    <button id="novra-chat-toggle" class="novra-chat-toggle" aria-label="Abrir chat com a Nova">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-           fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
-    </button>
-
-    <div id="novra-chat-balloon" class="novra-chat-balloon" hidden>
-      Olá! Posso te ajudar com dúvidas sobre eficiência energética?
-      <button id="novra-balloon-close" aria-label="Fechar balão">×</button>
+    <div id="novra-chat-messages" class="novra-chat-messages" role="log" aria-live="polite"></div>
+    <div id="novra-quick-questions" class="novra-quick-questions"></div>
+    <div class="novra-chat-input-area">
+      <input id="novra-chat-input" type="text" placeholder="Digite sua dúvida..."
+             autocomplete="off" aria-label="Digite sua mensagem" />
+      <button id="novra-chat-send" class="novra-chat-send" aria-label="Enviar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
     </div>
-
-    <div class="novra-chat-window" role="dialog" aria-label="Chat com a Nova">
-
-      <div class="novra-chat-header">
-        <div class="novra-chat-avatar" aria-hidden="true">N</div>
-        <div>
-          <div class="novra-chat-title">Nova</div>
-          <div class="novra-chat-subtitle">Assistente Novra · Online agora</div>
-        </div>
-        <button id="novra-chat-close" class="novra-chat-close" aria-label="Fechar chat">×</button>
-      </div>
-
-      <div id="novra-chat-messages" class="novra-chat-messages" role="log" aria-live="polite"></div>
-      <div id="novra-quick-questions" class="novra-quick-questions"></div>
-
-      <div class="novra-chat-input-area">
-        <input id="novra-chat-input" type="text" placeholder="Digite sua dúvida..."
-               autocomplete="off" aria-label="Digite sua mensagem" />
-        <button id="novra-chat-send" class="novra-chat-send" aria-label="Enviar mensagem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="novra-chat-footer">
-        Prefere falar diretamente?
-        <a href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20efici%C3%AAncia%20energ%C3%A9tica%20e%20gostaria%20de%20falar%20com%20um%20especialista."
-           target="_blank" rel="noopener">
-          Abrir WhatsApp
-        </a>
-      </div>
-
+    <div class="novra-chat-footer">
+      Prefere falar diretamente?
+      <a href="https://wa.me/5541987377444?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Novra%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+         target="_blank" rel="noopener">Abrir WhatsApp</a>
     </div>
   </div>
+</div>
 
-  <script>var NOVRA_PAGE = 'eficiencia';</script>
-  <script src="../assets/js/nova-chat.js"></script>
-
+<script>var NOVRA_PAGE = 'eficiencia';</script>
+<script src="../assets/js/nova-chat.js"></script>
+  
 </body>
 </html>
+
+
+
