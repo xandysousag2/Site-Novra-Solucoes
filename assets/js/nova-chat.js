@@ -376,5 +376,15 @@
       var data = await response.json();
       return data.reply || 'Não consegui processar sua pergunta agora. Tente pelo WhatsApp.';
     } catch (err) {
-      return 'Tive um problema
+      return 'Tive um problema técnico agora. Você pode falar com um especialista pelo WhatsApp aqui embaixo.';
+    }
+  }
+  */
 
+
+  /* ==========================================
+     INICIAR
+  ========================================== */
+  init();
+
+})();
