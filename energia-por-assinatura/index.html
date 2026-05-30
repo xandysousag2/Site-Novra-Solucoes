@@ -212,6 +212,97 @@
     <!-- PROCESSO -->
     <section class="section bg-dark">
       <div class="container">
+        
+  <section class="section bg-light" id="simulacao-economia">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Quer saber quanto sua empresa poderia economizar?</h2>
+      <p class="lead">
+        Em menos de 2 minutos, você nos envia os dados básicos da sua fatura
+        e recebe uma estimativa de economia mensal com energia por assinatura.
+      </p>
+    </div>
+
+    <div class="simulacao-grid">
+      <div class="simulacao-texto">
+        <h3>Simulação rápida, sem compromisso</h3>
+        <p>
+          A simulação é gratuita e não gera nenhum tipo de obrigação de adesão.
+          Ela serve para você entender, com números reais, se faz sentido dar o
+          próximo passo agora ou mais à frente.
+        </p>
+        <ul class="simulacao-lista">
+          <li>Indicado para faturas a partir de <strong>R$ 250/mês</strong></li>
+          <li>Atuação em <strong>PR, SC e MS</strong> (Copel, Celesc e Energisa)</li>
+          <li>Resultado enviado por e-mail ou WhatsApp em até 1 dia útil</li>
+        </ul>
+      </div>
+
+      <div class="simulacao-form-wrapper">
+        <form
+          class="simulacao-form"
+          action="https://formspree.io/f/SEU_ENDPOINT_AQUI"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="Nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="empresa">Empresa / Condomínio</label>
+            <input type="text" id="empresa" name="Empresa" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail para receber a simulação</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="whats">WhatsApp (opcional)</label>
+            <input type="tel" id="whats" name="WhatsApp" placeholder="(DDD) 99999-9999">
+          </div>
+
+          <div class="form-group">
+            <label for="fatura">Valor médio da fatura (R$)</label>
+            <input type="number" id="fatura" name="Fatura_media_R$" required>
+          </div>
+
+          <div class="form-group">
+            <label for="distribuidora">Distribuidora</label>
+            <select id="distribuidora" name="Distribuidora" required>
+              <option value="">Selecione...</option>
+              <option value="Copel">Copel (PR)</option>
+              <option value="Celesc">Celesc (SC)</option>
+              <option value="Energisa">Energisa (MS)</option>
+              <option value="Outra">Outra</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo de cliente</label>
+            <select id="tipo" name="Tipo_de_cliente" required>
+              <option value="">Selecione...</option>
+              <option value="Empresa">Empresa</option>
+              <option value="Condomínio">Condomínio</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Enviar dados para simulação
+          </button>
+
+          <p class="simulacao-privacidade">
+            Usamos seus dados apenas para esta simulação. Nenhuma informação é
+            compartilhada com terceiros sem seu consentimento.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
         <h2>Do primeiro contato à economia: 4 passos simples</h2>
 
         <div class="process-grid">
